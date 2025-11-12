@@ -34,7 +34,7 @@ export default function CardToolbox({ items }: CardToolboxProps) {
               } as React.CSSProperties
             }
           >
-            <div className="w-full relative h-full rounded-lg overflow-hidden flex flex-col bg-border p-4">
+            <div className="w-full relative h-full rounded-lg overflow-hidden flex flex-col bg-card p-4">
               <Image src={item.img} alt={item.name} width={64} height={64} />
             </div>
           </div>

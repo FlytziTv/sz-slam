@@ -9,8 +9,8 @@ import { ToolItems } from "@/data/user";
 export default function Ecosysteme() {
   return (
     <div className="h-full m-auto w-full px-8 gap-10 flex flex-col ">
-      <div className="flex flex-col">
-        <h1 className="text-4xl font-bold mb-4">Mon Setup</h1>
+      <div className="flex flex-col gap-4">
+        <h1 className="text-4xl font-bold">Mon Setup</h1>
         <div className="w-full flex flex-col gap-4">
           <div className="flex flex-row w-full gap-4 h-90">
             <CardSetup size="flex-1">
@@ -74,8 +74,8 @@ export default function Ecosysteme() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col ">
-        <h1 className="text-4xl font-bold mb-4">Ma Toolbox</h1>
+      <div className="flex flex-col gap-4">
+        <h1 className="text-4xl font-bold">Ma Toolbox</h1>
         <div className="flex flex-col gap-4">
           <CardToolbox items={ToolItems} />
           {/* <CardToolbox items={SoftItems} titre="Logiciels" /> */}

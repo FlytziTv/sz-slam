@@ -30,9 +30,9 @@ export default function CardBts({
       {items.map((item) => (
         <div
           key={item.titre}
-          className="bg-muted/50 rounded-md p-4 flex flex-col gap-2"
+          className="flex flex-col p-2 border-border border-2 rounded-2xl hover:border-foreground/50 transition-all duration-300"
         >
-          <div className="flex flex-col gap-4">
+          <div className="w-full relative h-full rounded-lg overflow-hidden flex flex-col bg-card p-2 gap-3">
             <div className="w-full h-30 relative rounded-sm overflow-hidden flex flex-row items-center justify-center">
               <Image
                 src={item.img}
@@ -44,49 +44,41 @@ export default function CardBts({
                 {item.option}
               </h2>
             </div>
-            <div className="flex flex-col">
-              <div className="flex flex-row justify-between items-center">
-                <h2 className="font-semibold text-xl">
-                  {item.titre}{" "}
-                  <span className="text-sm font-light text-foreground/60">
-                    {item.my_option ? " C'est ma spécialité" : ""}
-                  </span>
-                </h2>
-                <DropdownMenu modal={false}>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      aria-label="Open menu"
-                      size="icon-sm"
-                    >
-                      <MoreHorizontalIcon />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-40" align="end">
-                    <DropdownMenuGroup>
-                      <Link target="_blank" href={item.link}>
-                        <DropdownMenuItem>{item.titre} Ynov</DropdownMenuItem>
-                      </Link>
-                    </DropdownMenuGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
-              <div className="flex flex-col gap-2 mt-2">
-                <p className="text-sm">{item.description}</p>
-                <div className="flex flex-col gap-1">
-                  <p className="text-base font-medium">Débouchés</p>
-                  <ul className="list-disc list-inside">
-                    {(Array.isArray(item.debouchés)
-                      ? item.debouchés
-                      : item.debouchés.split(",")
-                    ).map((debouche) => (
-                      <li key={debouche.trim()} className="text-sm">
-                        {debouche.trim()}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+            <div className="flex flex-row justify-between items-center">
+              <h2 className="font-semibold text-xl">
+                {item.titre}
+                <span className="text-sm font-light text-foreground/60">
+                  {item.my_option ? " C'est ma spécialité" : ""}
+                </span>
+              </h2>
+              <DropdownMenu modal={false}>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" aria-label="Open menu" size="icon-sm">
+                    <MoreHorizontalIcon />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-40" align="end">
+                  <DropdownMenuGroup>
+                    <Link target="_blank" href={item.link}>
+                      <DropdownMenuItem>{item.titre} Ynov</DropdownMenuItem>
+                    </Link>
+                  </DropdownMenuGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+            <p className="text-sm">{item.description}</p>
+            <div className="flex flex-col gap-1">
+              <p className="text-base font-medium">Débouchés</p>
+              <ul className="list-disc list-inside">
+                {(Array.isArray(item.debouchés)
+                  ? item.debouchés
+                  : item.debouchés.split(",")
+                ).map((debouche) => (
+                  <li key={debouche.trim()} className="text-sm">
+                    {debouche.trim()}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

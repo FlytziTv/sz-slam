@@ -22,6 +22,10 @@ export const dataNavbar = {
           url: "/Formations",
         },
         {
+          title: "Mes Certifications",
+          url: "/Certifications",
+        },
+        {
           title: "Mon Écosystème",
           url: "/Ecosysteme",
         },

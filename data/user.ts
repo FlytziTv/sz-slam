@@ -409,3 +409,26 @@ export const PcItems = [
     link: "https://amzn.eu/d/dV1fQIa",
   },
 ];
+
+export const CertifItems = [
+  {
+    id: 1,
+    categorie: "Autodidacte",
+    titre: "Html",
+    img: "/img/certif/html.png",
+    pdf: "/files/Certif_Html.pdf",
+    description:
+      "Certification Codedex en HTML5 : maîtrise de la structure de pages, des balises sémantiques, des formulaires et des bonnes pratiques d'accessibilité.",
+    link: "https://www.codedex.io/html",
+  },
+  {
+    id: 2,
+    categorie: "Autodidacte",
+    titre: "Css",
+    img: "/img/certif/css.png",
+    pdf: "/files/Certif_Css.pdf",
+    description:
+      "Certification Codedex en CSS3 : compétences en mise en forme, layout responsif, gestion des flexbox/grid et bonnes pratiques de design.",
+    link: "https://www.codedex.io/css",
+  },
+];
