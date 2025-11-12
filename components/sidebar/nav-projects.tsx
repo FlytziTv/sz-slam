@@ -1,6 +1,8 @@
 "use client";
+
 import { ChevronRight, type LucideIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+
 import {
   Collapsible,
   CollapsibleContent,
@@ -18,24 +20,27 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 
-export function NavMain({
-  items,
+export function NavProjects({
+  projects,
 }: {
-  items: {
+  projects: {
     title: string;
     url: string;
     icon: LucideIcon;
     isActive?: boolean;
-    items?: { title: string; url: string }[];
+    items?: {
+      title: string;
+      url: string;
+    }[];
   }[];
 }) {
   const pathname = usePathname();
 
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>A Propos</SidebarGroupLabel>
+      <SidebarGroupLabel>Mes Projets</SidebarGroupLabel>
       <SidebarMenu>
-        {items.map((item) => (
+        {projects.map((item) => (
           <Collapsible key={item.title} asChild defaultOpen={item.isActive}>
             <SidebarMenuItem>
               <SidebarMenuButton
@@ -50,7 +55,6 @@ export function NavMain({
                   <span>{item.title}</span>
                 </a>
               </SidebarMenuButton>
-
               {item.items?.length ? (
                 <>
                   <CollapsibleTrigger asChild>

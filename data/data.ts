@@ -27,6 +27,9 @@ export const dataNavbar = {
         },
       ],
     },
+  ],
+
+  navProjects: [
     {
       title: "Missions E5",
       url: "/Missions",
@@ -69,6 +72,7 @@ export const dataNavbar = {
       icon: Search,
     },
   ],
+
   navSecondary: [
     {
       title: "Contacts",

@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import { type LucideIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -18,43 +19,30 @@ export function NavSecondary({
     title: string;
     url: string;
     icon: LucideIcon;
-    isActive?: boolean;
   }[];
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
-  const pathname = usePathname() ?? "/";
-
-  const normalize = (p?: string) => {
-    if (!p) return "/";
-    if (p === "/") return "/";
-    return p.replace(/\/+$/, "");
-  };
-
-  const current = normalize(pathname);
+  const pathname = usePathname();
 
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu>
-          {items.map((item) => {
-            const itemUrl = normalize(item.url);
-            const isActive =
-              item.url !== "#" &&
-              (current === itemUrl || current.startsWith(itemUrl + "/"));
-
-            return (
-              <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild size="sm" isActive={isActive}>
-                  <a
-                    href={item.url}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    <item.icon />
-                    <span>{item.title}</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            );
-          })}
+          {items.map((item) => (
+            <SidebarMenuItem key={item.title}>
+              <SidebarMenuButton
+                asChild
+                size="sm"
+                className={
+                  pathname === item.url ? "bg-primary/10 text-primary" : ""
+                }
+              >
+                <a href={item.url}>
+                  <item.icon />
+                  <span>{item.title}</span>
+                </a>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          ))}
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
