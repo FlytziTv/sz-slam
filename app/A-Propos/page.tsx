@@ -1,12 +1,11 @@
 import Image from "next/image";
 
-import { SkillsItems, UserItems } from "@/data/user";
+import { UserItems } from "@/data/user";
 import IconsSocial from "@/components/folio/IconsSocial";
-import { CardSkills } from "@/components/folio/card/CardSkills";
 
 export default function A_Propos() {
   return (
-    <div className="gh-full m-auto w-full px-10 gap-8 flex flex-col ">
+    <div className="h-full m-auto w-full px-8 gap-8 flex flex-col ">
       <div className="w-full flex flex-row items-center gap-4">
         <div className="flex flex-row relative">
           <Image
@@ -36,8 +35,6 @@ export default function A_Propos() {
           {UserItems.description}
         </p>
       </div>
-
-      <CardSkills items={SkillsItems} />
     </div>
   );
 }

@@ -18,6 +18,8 @@ import {
 } from "@/components/ui/sidebar";
 import { dataNavbar } from "@/data/data";
 
+import { Toaster } from "@/components/ui/sonner";
+
 export const metadata: Metadata = {
   title: "Folio - Alexis De Jesus",
   description: "Portfolio d'Alexis De Jesus, étudiant en BTS SIO option SLAM.",
@@ -61,6 +63,7 @@ export default function RootLayout({
               <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
                 {children}
               </div>
+              <Toaster />
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>

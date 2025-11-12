@@ -58,13 +58,13 @@ function GridItem({
         transition: "background 0.2s ease-out",
       }}
     >
-      <div className="w-full flex flex-row items-start">
+      <div className="absolute flex flex-row items-start">
         <p className="font-light px-2 py-1 text-xs bg-card rounded-full">
           {item.categorie}
         </p>
       </div>
 
-      <div className="flex flex-col items-center text-center gap-1">
+      <div className="flex flex-col items-center text-center gap-1 p-3">
         <div
           className="flex flex-row p-3 border rounded-full"
           style={{
@@ -81,9 +81,9 @@ function GridItem({
           />
         </div>
         <h3 className="font-semibold text-xl">{item.name}</h3>
-        <p className="font-light text-sm text-muted-foreground">
+        {/* <p className="font-light text-sm text-muted-foreground">
           {item.description}
-        </p>
+        </p> */}
       </div>
     </div>
   );
