@@ -29,7 +29,7 @@ export const CardSetup = ({
     >
       <div
         className={cn(
-          "w-full relative h-full rounded-lg overflow-hidden flex flex-col bg-card p-4",
+          "w-full relative h-full rounded-lg overflow-hidden flex flex-col bg-card ",
           className
         )}
       >

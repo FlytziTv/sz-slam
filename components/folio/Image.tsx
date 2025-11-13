@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -6,12 +7,14 @@ import { useState } from "react";
 export default function ZoomImage({
   src,
   alt,
+  fill = false,
   width,
   height,
   className = "",
 }: {
   src: string;
   alt: string;
+  fill?: boolean;
   width?: number;
   height?: number;
   className?: string;
@@ -23,15 +26,14 @@ export default function ZoomImage({
       {/* Image miniature */}
       <motion.div
         whileHover={{ scale: 1 }}
-        className={`cursor-pointer`}
+        className="cursor-pointer w-full h-full relative"
         onClick={() => setOpen(true)}
       >
         <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
-          className={`object-cover transition-transform duration-300 ${className}`}
+          {...(fill ? { fill: true } : { width, height })}
+          className={`object-cover ${className}`}
         />
       </motion.div>
 
@@ -54,8 +56,8 @@ export default function ZoomImage({
               <Image
                 src={src}
                 alt={alt}
-                width={1000}
-                height={800}
+                width={1200}
+                height={900}
                 className="max-h-[90vh] max-w-[90vw] object-contain cursor-zoom-out"
               />
             </motion.div>

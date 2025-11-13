@@ -2,9 +2,9 @@ import { CardSetup } from "@/components/folio/card/CardSetup";
 import CardToolbox from "@/components/folio/card/CardToolbox";
 import { PcItems, SetupItems } from "@/data/user";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
 
 import { ToolItems } from "@/data/user";
+import ZoomImage from "@/components/folio/Image";
 
 export default function Ecosysteme() {
   return (
@@ -14,15 +14,15 @@ export default function Ecosysteme() {
         <div className="w-full flex flex-col gap-4">
           <div className="flex flex-row w-full gap-4 h-90">
             <CardSetup size="flex-1">
-              <Image
+              <ZoomImage
                 src="/img/background/setup.jpg"
                 alt="Mon Setup"
                 fill
-                className="object-cover "
+                className="object-cover"
               />
             </CardSetup>
 
-            <CardSetup size="sm" className="gap-2">
+            <CardSetup size="sm" className="gap-2 p-4">
               <h1 className="font-medium text-lg w-full text-center">
                 Mon Setup
               </h1>
@@ -45,15 +45,15 @@ export default function Ecosysteme() {
           </div>
           <div className="flex flex-row w-1/2 gap-4 h-90">
             <CardSetup size="flex-1">
-              <Image
+              <ZoomImage
                 src="/img/background/pc.jpg"
-                alt="Mon Setup"
+                alt="Mon Pc"
                 fill
-                className="object-cover "
+                className="object-cover"
               />
             </CardSetup>
 
-            <CardSetup size="sm" className="gap-2">
+            <CardSetup size="sm" className="gap-2 p-4">
               <h1 className="font-medium text-lg w-full text-center">Mon Pc</h1>
               <ul className="flex flex-col h-full gap-2">
                 {PcItems.map((item, index) => (

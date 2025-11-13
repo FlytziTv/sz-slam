@@ -38,7 +38,7 @@ export const dataNavbar = {
       title: "Missions E5",
       url: "/Missions",
       icon: Briefcase,
-      isActive: true,
+      isActive: false,
       items: [
         {
           title: "Projet 1",
@@ -58,7 +58,7 @@ export const dataNavbar = {
       title: "Projets E6",
       url: "/Projets",
       icon: Code2,
-      isActive: true,
+      isActive: false,
       items: [
         {
           title: "Projet 1",

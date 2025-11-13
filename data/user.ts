@@ -14,6 +14,16 @@ export const UserItems = {
   // Aujourd’hui, je souhaite me spécialiser dans le développement logiciel ou embarqué, où je peux allier logique, optimisation et innovation.`,
 };
 
+export const HackerItems = {
+  name: "Flytzi",
+  role: "Analyste Réseau | Ghost Ops",
+  location: "Everywhere / Nowhere",
+  image: "/img/test/me_h.jpg",
+  banner: "/img/background/banner_h.png",
+  description:
+    "Access restricted. Informations cryptées. Surveillance active...",
+};
+
 export const SocialItems = [
   {
     id: 1,
@@ -419,9 +429,9 @@ export const CertifItems = [
     categorie: "Autodidacte",
     titre: "Html",
     img: "/img/certif/html.png",
-    pdf: "/files/Certif_Html.pdf",
+    pdf: "/files/certif/codédex_html.pdf",
     description:
-      "Certification Codedex en HTML5 : maîtrise de la structure de pages, des balises sémantiques, des formulaires et des bonnes pratiques d'accessibilité.",
+      "Certification Codedex en HTML5 : maîtrise de la structure sémantique, création de pages web accessibles, formulaires complets et bonnes pratiques de balisage.",
     link: "https://www.codedex.io/html",
   },
   {
@@ -429,9 +439,19 @@ export const CertifItems = [
     categorie: "Autodidacte",
     titre: "Css",
     img: "/img/certif/css.png",
-    pdf: "/files/Certif_Css.pdf",
+    pdf: "/files/certif/codédex_css.pdf",
     description:
-      "Certification Codedex en CSS3 : compétences en mise en forme, layout responsif, gestion des flexbox/grid et bonnes pratiques de design.",
+      "Certification Codedex en CSS3 : compétences en mise en forme, layout responsif, gestion avancée des flexbox/grid et application des bonnes pratiques de design.",
     link: "https://www.codedex.io/css",
+  },
+  {
+    id: 3,
+    categorie: "Scolaire",
+    titre: "Pix",
+    img: "/img/certif/pix.png",
+    pdf: "/files/certif/pix.pdf",
+    description:
+      "Certification PIX : validation des compétences numériques clés, sécurité informatique, gestion de l’information, résolution de problèmes et maîtrise des outils digitaux.",
+    link: "https://pix.fr/",
   },
 ];
