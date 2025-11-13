@@ -6,9 +6,12 @@ import { MailIcon } from "@/components/Icons/mail";
 export const UserItems = {
   name: "Alexis De Jesus",
   role: "Développeur Full Stack Junior",
-  location: "Triel sur Seine, France",
+  location: "Paris, France",
   image: "/img/test/me.jpg",
-  description: `Je suis un étudiant alternant en développement logiciel et administration systèmes et réseaux. Passionné d’informatique depuis mon plus jeune âge, j’ai rapidement commencé à apprendre le développement par curiosité et envie de créer. Au fil du temps, j’ai exploré plusieurs langages tels que HTML, CSS, JavaScript, Python et Java, ce dernier étant l’un de mes préférés. Bien que j’aie réalisé de nombreux projets orientés web, je souhaite aujourd’hui me spécialiser dans le développement logiciel ou embarqué, des domaines où je peux allier logique, performance et innovation.`,
+  banner: "/img/background/banner.png",
+  //   description: `Je suis étudiant en alternance en développement logiciel et administration systèmes & réseaux.
+  // Passionné par la création d’outils performants et fiables, j’ai travaillé sur différents projets en Java, Python et JavaScript.
+  // Aujourd’hui, je souhaite me spécialiser dans le développement logiciel ou embarqué, où je peux allier logique, optimisation et innovation.`,
 };
 
 export const SocialItems = [

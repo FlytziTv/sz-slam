@@ -164,12 +164,6 @@ export function ContactForm({ className, ...props }: ContactFormProps) {
       <FieldDescription className="px-6 text-center">
         Tes informations ne seront utilisées que pour te répondre.
       </FieldDescription>
-      <Button
-        variant="outline"
-        onClick={() => toast.success("Event has been created")}
-      >
-        Success
-      </Button>
     </div>
   );
 }
