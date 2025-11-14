@@ -1,17 +1,15 @@
 import { CardSetup } from "@/components/folio/card/CardSetup";
-import CardToolbox from "@/components/folio/card/CardToolbox";
 import { PcItems, SetupItems } from "@/data/user";
 import { ChevronRight } from "lucide-react";
 
-import { ToolItems } from "@/data/user";
 import ZoomImage from "@/components/folio/Image";
 
 export default function Ecosysteme() {
   return (
     <div className="h-full m-auto w-full px-8 gap-10 flex flex-col ">
-      <div className="flex flex-col gap-4">
+      <div className="h-full flex flex-col gap-4">
         <h1 className="text-4xl font-bold">Mon Setup</h1>
-        <div className="w-full flex flex-col gap-4">
+        <div className="w-full h-full flex flex-col gap-4">
           <div className="flex flex-row w-full gap-4 h-90">
             <CardSetup size="flex-1">
               <ZoomImage
@@ -72,13 +70,6 @@ export default function Ecosysteme() {
               </ul>
             </CardSetup>
           </div>
-        </div>
-      </div>
-      <div className="flex flex-col gap-4">
-        <h1 className="text-4xl font-bold">Ma Toolbox</h1>
-        <div className="flex flex-col gap-4">
-          <CardToolbox items={ToolItems} />
-          {/* <CardToolbox items={SoftItems} titre="Logiciels" /> */}
         </div>
       </div>
     </div>

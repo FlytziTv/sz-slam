@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import { SidebarTrigger } from "../ui/sidebar";
 import { Separator } from "@/components/ui/separator";
-import { dataNavbar } from "@/data/data";
 
 export function AppHeader() {
   return (
@@ -20,7 +19,7 @@ export function AppHeader() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbPage>{dataNavbar.navMain[0].title}</BreadcrumbPage>
+              <BreadcrumbPage>Portfolio Alexis De Jesus</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

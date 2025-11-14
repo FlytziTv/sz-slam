@@ -1,4 +1,5 @@
 import { Briefcase, Code2, Home, Search, Send, User } from "lucide-react";
+import { MissionsItems, ProjetsItems } from "./projets";
 
 export const dataNavbar = {
   navMain: [
@@ -13,22 +14,11 @@ export const dataNavbar = {
       icon: User,
       isActive: true,
       items: [
-        {
-          title: "Mon Bts",
-          url: "/Bts",
-        },
-        {
-          title: "Ma Formation",
-          url: "/Formations",
-        },
-        {
-          title: "Mes Certifications",
-          url: "/Certifications",
-        },
-        {
-          title: "Mon Écosystème",
-          url: "/Ecosysteme",
-        },
+        { title: "Mon Bts", url: "/A-Propos/Bts" },
+        { title: "Ma Formation", url: "/A-Propos/Formations" },
+        { title: "Mes Certifications", url: "/A-Propos/Certifications" },
+        { title: "Mes Compétences", url: "/A-Propos/Skills" },
+        { title: "Mon Écosystème", url: "/A-Propos/Ecosysteme" },
       ],
     },
   ],
@@ -39,36 +29,20 @@ export const dataNavbar = {
       url: "/Missions",
       icon: Briefcase,
       isActive: false,
-      items: [
-        {
-          title: "Projet 1",
-          url: "#",
-        },
-        {
-          title: "Projet 2",
-          url: "#",
-        },
-        {
-          title: "Projet 3",
-          url: "#",
-        },
-      ],
+      items: MissionsItems.filter((p) => p.page).map((p) => ({
+        title: p.titre,
+        url: `/Missions/${p.id}`,
+      })),
     },
     {
       title: "Projets E6",
       url: "/Projets",
       icon: Code2,
       isActive: false,
-      items: [
-        {
-          title: "Projet 1",
-          url: "#",
-        },
-        {
-          title: "Projet 2",
-          url: "#",
-        },
-      ],
+      items: ProjetsItems.filter((p) => p.page).map((p) => ({
+        title: p.titre,
+        url: `/Projets/${p.id}`,
+      })),
     },
     {
       title: "Veilles",
