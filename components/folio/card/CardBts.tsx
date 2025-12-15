@@ -26,7 +26,7 @@ export default function CardBts({
   }[];
 }) {
   return (
-    <div className="grid auto-rows-min gap-4 md:grid-cols-2">
+    <div className="grid auto-rows-min gap-4 sm:grid-cols-1 md:grid-cols-1 2xl:grid-cols-2 grid-cols-1">
       {items.map((item) => (
         <div
           key={item.titre}
