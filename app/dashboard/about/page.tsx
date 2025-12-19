@@ -82,7 +82,7 @@ export default function About() {
                 key={idx}
                 href={social.href}
                 target="_blank"
-                className="flex items-center w-30 justify-center aspect-square rounded-3xl bg-zinc-50 border border-zinc-100 hover:border-szcolor hover:bg-szcolor/20 transition-all group"
+                className="flex items-center w-30 justify-center aspect-square rounded-3xl bg-zinc-50 border border-zinc-100 hover:border-szcolor hover:bg-szcolor/20 transition-all group duration-500"
               >
                 <social.Icon
                   size={24}
@@ -94,10 +94,11 @@ export default function About() {
         </div>
       </div>
       <div className="grid grid-cols-5 gap-6">
-        {personal_data.stats.map(({ id, label, val, unit, sub }) => (
-          <div
+        {personal_data.stats.map(({ id, link_page, label, val, unit, sub }) => (
+          <Link
             key={id}
-            className="flex flex-col items-center justify-center gap-2 bg-border/30 backdrop-blur-xl border border-border/40 rounded-4xl p-8 text-center"
+            href={link_page}
+            className="flex flex-col items-center justify-center gap-2 bg-border/30 backdrop-blur-xl border border-border/40 rounded-4xl p-8 text-center hover:border-szcolor hover:bg-szcolor/20 transition-all duration-500"
           >
             <span className="block text-[9px] font-black text-zinc-400 uppercase tracking-widest ">
               {label}
@@ -109,7 +110,7 @@ export default function About() {
             <p className="text-[9px] text-zinc-500 uppercase font-bold">
               {sub}
             </p>
-          </div>
+          </Link>
         ))}
 
         <div className="flex flex-col items-center justify-between gap-2 bg-zinc-900 backdrop-blur-xl border border-border/40 rounded-4xl p-8 text-center">
@@ -142,17 +143,12 @@ export default function About() {
         </span>
         <div className="flex flex-wrap justify-center gap-3 text-[10px] font-mono font-bold uppercase">
           {personal_data.stack.map((tech) => (
-            <motion.span
+            <span
               key={tech}
-              whileHover={{
-                y: -2,
-                color: "var(--szcolor)",
-                borderColor: "var(--szcolor)",
-              }}
-              className="px-4 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded-xl transition-all cursor-default bg-white/50 dark:bg-transparent"
+              className="px-4 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded-xl cursor-default bg-white/50 hover:border-szcolor hover:bg-szcolor/20 transition-all duration-500"
             >
               {tech}
-            </motion.span>
+            </span>
           ))}
         </div>
       </div>

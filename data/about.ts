@@ -5,17 +5,33 @@ export const personal_data = {
   lastname: "De Jesus",
 
   stats: [
-    { id: 1, label: "Expérience", val: "2", unit: "ANS", sub: "En formation" },
+    {
+      id: 1,
+      link_page: "/dashboard/about/formation",
+      label: "Expérience",
+      val: "2",
+      unit: "ANS",
+      sub: "En formation",
+    },
     {
       id: 2,
+      link_page: "/dashboard/missions",
       label: "Projets",
       val: "15",
       unit: "+",
       sub: "En cours et terminés",
     },
-    { id: 3, label: "Certifications", val: "3", unit: "", sub: "Obtenues" },
+    {
+      id: 3,
+      link_page: "/dashboard/about/certifications",
+      label: "Certifications",
+      val: "3",
+      unit: "",
+      sub: "Obtenues",
+    },
     {
       id: 4,
+      link_page: "/dashboard/about/bts",
       label: "Formation",
       val: "BTS SIO ",
       unit: "SLAM",
@@ -24,6 +40,7 @@ export const personal_data = {
   ],
   location: {
     label: "Localisation",
+    link_page: "",
     val: "Paris",
     unit: "FR",
     sub: "Nanterre Campus",
