@@ -1,52 +1,8 @@
-import { Code2, Network, Terminal } from "lucide-react";
-
-export const personal_data = {
-  firstname: "Alexis",
-  lastname: "De Jesus",
-
-  stats: [
-    {
-      id: 1,
-      link_page: "/dashboard/about/formation",
-      label: "Expérience",
-      val: "2",
-      unit: "ANS",
-      sub: "En formation",
-    },
-    {
-      id: 2,
-      link_page: "/dashboard/missions",
-      label: "Projets",
-      val: "15",
-      unit: "+",
-      sub: "En cours et terminés",
-    },
-    {
-      id: 3,
-      link_page: "/dashboard/about/certifications",
-      label: "Certifications",
-      val: "3",
-      unit: "",
-      sub: "Obtenues",
-    },
-    {
-      id: 4,
-      link_page: "/dashboard/about/bts",
-      label: "Formation",
-      val: "BTS SIO ",
-      unit: "SLAM",
-      sub: "Promo 2025 - 2027",
-    },
-  ],
-  location: {
-    label: "Localisation",
-    link_page: "",
-    val: "Paris",
-    unit: "FR",
-    sub: "Nanterre Campus",
-  },
-  stack: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"],
-};
+import { Code2, MailIcon, Network, Terminal } from "lucide-react";
+import { projects_list } from "./projects";
+import { GithubIcon } from "@/components/Icons/github";
+import { LinkedInIcon } from "@/components/Icons/linkedin";
+import { CvIcon } from "@/components/Icons/cv";
 
 export const bts_data = [
   {
@@ -57,6 +13,33 @@ export const bts_data = [
     icons: Terminal,
     Description:
       "Ce cursus d'excellence en deux ans forme des techniciens supérieurs capables de gérer les enjeux de la transformation numérique. Il combine expertise technique, cybersécurité et gestion de projets au service des entreprises.",
+  },
+];
+
+export const SocialItems = [
+  {
+    id: 1,
+    name: "GitHub",
+    url: "https://github.com/flytzitv",
+    icon: GithubIcon,
+  },
+  {
+    id: 2,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/alexis-dejesus/",
+    icon: LinkedInIcon,
+  },
+  {
+    id: 3,
+    name: "Email",
+    url: "mailto:alexis.dejesus019@gmail.com",
+    icon: MailIcon,
+  },
+  {
+    id: 4,
+    name: "Mon CV",
+    url: "/files/CV_Alexis_De_Jesus.pdf",
+    icon: CvIcon,
   },
 ];
 
@@ -321,3 +304,51 @@ export const tools_data = [
     link: "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
   },
 ];
+
+export const personal_data = {
+  firstname: "Alexis",
+  lastname: "De Jesus",
+
+  stats: [
+    {
+      id: 1,
+      link_page: "/dashboard/about/formation",
+      label: "Expérience",
+      val: "2",
+      unit: "ANS",
+      sub: "En formation",
+    },
+    {
+      id: 2,
+      link_page: "/dashboard/missions",
+      label: "Projets",
+      val: projects_list.length,
+      unit: "+",
+      sub: "En cours et terminés",
+    },
+    {
+      id: 3,
+      link_page: "/dashboard/about/certifications",
+      label: "Certifications",
+      val: certif_data.length,
+      unit: "",
+      sub: "Obtenues",
+    },
+    {
+      id: 4,
+      link_page: "/dashboard/about/bts",
+      label: "Formation",
+      val: "BTS SIO ",
+      unit: "SLAM",
+      sub: "Promo 2025 - 2027",
+    },
+  ],
+  location: {
+    label: "Localisation",
+    link_page: "",
+    val: "Paris",
+    unit: "FR",
+    sub: "Nanterre Campus",
+  },
+  stack: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"],
+};

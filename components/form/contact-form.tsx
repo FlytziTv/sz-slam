@@ -1,21 +1,18 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
-import { Contact } from "lucide-react";
+import { Send } from "lucide-react";
 
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
-} from "@/components/ui/field";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-import { SocialItems } from "@/data/user";
+import { SocialItems } from "@/data/about";
+import { Separator } from "../ui/separator";
+import Link from "next/link";
 
 type ContactFormProps = React.ComponentProps<"div">;
 
@@ -59,53 +56,46 @@ export function ContactForm({ className, ...props }: ContactFormProps) {
 
   return (
     <div
-      className={cn("flex flex-col gap-6 w-full max-w-2xl", className)}
+      className={cn(
+        "flex flex-col gap-6 w-full bg-card border border-border rounded-4xl p-8",
+        className
+      )}
       {...props}
     >
       <form onSubmit={handleSubmit}>
-        <FieldGroup>
-          {/* En-tête du formulaire */}
-          <div className="flex flex-col items-center gap-2 text-center">
-            <span className="flex flex-col items-center gap-2 font-medium">
-              <div className="flex size-8 items-center justify-center rounded-md">
-                <Contact className="size-6" />
-              </div>
-              <span className="sr-only">Formulaire de contact</span>
-            </span>
-            <h1 className="text-xl font-bold">Me contacter</h1>
-            <FieldDescription>
-              Laissez-moi un message — je vous répondrai au plus vite.
-            </FieldDescription>
-          </div>
-
-          {/* Champs nom + email */}
+        <FieldGroup className="gap-6">
           <div className="flex flex-col sm:flex-row gap-4">
             <Field className="flex-1">
-              <FieldLabel htmlFor="name">Nom</FieldLabel>
+              <FieldLabel htmlFor="name" className="text-zinc-500">
+                // Nom
+              </FieldLabel>
               <Input
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Alexis De Jesus"
+                placeholder="Nom & Prénom"
                 required
               />
             </Field>
 
             <Field className="flex-1">
-              <FieldLabel htmlFor="email">Email</FieldLabel>
+              <FieldLabel htmlFor="email" className="text-zinc-500">
+                // Email
+              </FieldLabel>
               <Input
                 id="email"
                 name="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder="email@example.com"
                 required
               />
             </Field>
           </div>
 
-          {/* Champ message */}
           <Field>
-            <FieldLabel htmlFor="message">Message</FieldLabel>
+            <FieldLabel htmlFor="message" className="text-zinc-500">
+              // Message
+            </FieldLabel>
             <Textarea
               id="message"
               name="message"
@@ -126,44 +116,40 @@ export function ContactForm({ className, ...props }: ContactFormProps) {
             aria-hidden="true"
           />
 
-          {/* Bouton d'envoi */}
           <Field>
-            <Button type="submit">Envoyer</Button>
+            <Button
+              type="submit"
+              variant={"default"}
+              size={"lg"}
+              className="w-full sm:w-fit font-black uppercase italic tracking-widest rounded-xl transition-all hover:scale-102 active:scale-98"
+            >
+              Envoyer_Message <Send size={16} className="ml-2 text-szcolor" />
+            </Button>
           </Field>
 
-          <FieldSeparator>Ou</FieldSeparator>
+          <Separator />
 
-          {/* Boutons réseaux */}
-          <Field className="grid gap-4 sm:grid-cols-2">
-            {SocialItems.filter((s) =>
-              ["GitHub", "LinkedIn"].includes(s.name)
-            ).map((item) => {
-              const Icon = item.icon; // Récupération du composant d’icône
-              return (
-                <Button asChild variant="outline" type="button" key={item.id}>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={item.name}
-                    className="flex flex-row items-center gap-2"
-                  >
-                    <Icon
-                      size={16}
-                      className="text-primary hover:text-primary/80 transition-colors"
-                    />
-                    {item.name}
-                  </a>
-                </Button>
-              );
-            })}
-          </Field>
+          <div className=" flex flex-row items-center justify-between gap-4">
+            <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest italic">
+              Retrouvez-moi sur:
+            </span>
+            <div className="flex flex-wrap justify-center gap-3 text-[10px] font-mono font-bold uppercase">
+              {SocialItems.filter((s) =>
+                ["GitHub", "LinkedIn"].includes(s.name)
+              ).map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.url}
+                  target="_blank"
+                  className="px-4 py-1.5 border border-zinc-200 dark:border-zinc-800 rounded-xl cursor-default bg-white/50 hover:border-szcolor hover:bg-szcolor/20 transition-all duration-500"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
         </FieldGroup>
       </form>
-
-      <FieldDescription className="px-6 text-center">
-        Vos informations ne seront utilisées que pour vous répondre.
-      </FieldDescription>
     </div>
   );
 }

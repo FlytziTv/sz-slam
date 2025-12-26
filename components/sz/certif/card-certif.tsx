@@ -51,13 +51,21 @@ export default function CardCertif({
 
       <div className="relative z-10 flex gap-2 items-center w-full">
         <Link href={pdf} target="_blank" className="flex-1">
-          <Button variant={"ghost"} size={"sm"} className="w-full">
+          <Button
+            variant={"ghost"}
+            size={"sm"}
+            className="w-full border border-transparent hover:bg-szcolor/10 transition-all hover:border-szcolor/20"
+          >
             Voir le pdf
           </Button>
         </Link>
 
         <Link href={link} target="_blank" className="flex-1">
-          <Button variant={"ghost"} size={"sm"} className="w-full">
+          <Button
+            variant={"ghost"}
+            size={"sm"}
+            className="w-full border border-transparent hover:bg-szcolor/10 transition-all hover:border-szcolor/20"
+          >
             Aller sur le site
           </Button>
         </Link>

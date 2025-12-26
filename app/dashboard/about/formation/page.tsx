@@ -1,39 +1,44 @@
 "use client";
+import { motion } from "framer-motion";
 import { ExternalLink, MapPin, Target, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Formation() {
   return (
-    <div className="p-4 h-full flex flex-col items-center justify-center gap-4 font-sans selection:bg-szcolor/30">
-      <div className=" grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
-        <div className="md:col-span-3 bg-white border border-border rounded-4xl p-10 flex flex-col justify-between group transition-all hover:border-szcolor/30">
-          <div className="flex flex-row items-center gap-3 px-4 py-1.5 rounded-full bg-zinc-900 text-white text-[10px] font-black uppercase tracking-[0.2em] w-fit italic">
-            <Target size={12} className="text-szcolor" /> System_Education_Base
+    <div className="p-4 flex flex-col gap-6 font-sans">
+      <div className="bg-card border border-border rounded-4xl p-8 flex flex-row justify-between items-start">
+        <div className="flex flex-col gap-4 shrink-0">
+          <div className="flex flex-row items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 text-white text-[10px] font-black uppercase tracking-[0.2em] w-fit">
+            <Target size={10} className="fill-szcolor text-szcolor" />
+            <p>System_Education_Base</p>
           </div>
-
-          <div className="space-y-2">
-            <h1 className="text-6xl md:text-8xl font-black italic uppercase tracking-[ -0.05em] leading-[0.85]">
-              Paris <br />
-              <span className="text-szcolor">Ynov</span>{" "}
-              <span className="text-zinc-300 font-outline-2  transition-colors duration-500">
-                Campus
-              </span>
-            </h1>
-          </div>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter italic uppercase leading-[0.9]">
+            Paris <br />
+            <span className="text-szcolor font-outline-2 ">Ynov</span>{" "}
+            <span className="text-zinc-300 font-outline-2  transition-colors duration-500">
+              Campus
+            </span>
+          </h1>
+          <p className="text-szcolor font-mono text-sm font-bold uppercase tracking-widest"></p>
         </div>
 
-        <div className="bg-zinc-900 rounded-4xl flex items-center justify-center p-8 group overflow-hidden relative shadow-2xl border border-zinc-800">
+        <motion.div
+          whileHover={{ scale: 1.02, rotate: 2 }}
+          // className="w-64 h-full bg-zinc-900 text-white rounded-2xl p-8 flex flex-col justify-between gap-6 shadow-2xl"
+          className="w-64 h-full bg-zinc-900 rounded-4xl flex items-center justify-center p-8 group overflow-hidden relative shadow-2xl border border-zinc-800"
+        >
           <Image
             src="/img/icons/ynov.svg"
             alt="Logo"
             width={120}
             height={120}
-            className="invert brightness-0 grayscale group-hover:invert-0 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-125 z-10"
+            className="invert brightness-0 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-125 z-10"
           />
-          <div className="absolute inset-0 bg-szcolor opacity-0 group-hover:opacity-10 transition-opacity" />
-        </div>
+        </motion.div>
+      </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
         <div className="md:col-span-2 bg-szcolor rounded-4xl p-10 text-white flex flex-col justify-center gap-6 shadow-xl shadow-szcolor/20 group overflow-hidden relative">
           <p className="text-3xl md:text-4xl font-black italic uppercase tracking-tighter leading-[0.9] z-10">
             &quot;L&apos;immersion professionnelle & l&apos;innovation technique
