@@ -30,7 +30,7 @@ export default function Projects() {
             title={project.title}
             desc={project.desc}
             tags={project.tags}
-            github={project.github}
+            links={project.links}
             status={project.status}
             size={project.size}
           />

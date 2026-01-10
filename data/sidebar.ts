@@ -1,57 +1,86 @@
-import { Briefcase, Code2, Search, Send, UserRound } from "lucide-react";
+import {
+  BadgeCheck,
+  BookOpen,
+  Briefcase,
+  Code2,
+  GraduationCap,
+  Search,
+  Send,
+  TvMinimal,
+  UserRound,
+} from "lucide-react";
 
-export const sidebar_data = {
-  navMain: [
+const dash = "/dashboard/";
+const about = "/dashboard/about";
+
+export const data_sidebar = {
+  About: [
     {
-      title: "A Propos",
-      url: "/dashboard/about",
-      icon: UserRound,
-      isActive: true,
-      items: [
+      id_group: 1,
+      title_group: "À propos",
+      group: [
         {
-          title: "Mon BTS",
-          url: "/dashboard/about/bts",
+          title: "A Propos",
+          url: `${about}`,
+          icon: UserRound,
         },
         {
-          title: "Ma Formation",
-          url: "/dashboard/about/formation",
+          title: "Mon BTS",
+          url: `${about}/bts`,
+          icon: BookOpen,
+        },
+        {
+          title: "Mon Ecole & Entreprise",
+          url: `${about}/formation`,
+          icon: GraduationCap,
         },
         {
           title: "Mes Certifications",
-          url: "/dashboard/about/certifications",
+          url: `${about}/certifications`,
+          icon: BadgeCheck,
         },
         {
           title: "Mon Écosystème",
-          url: "/dashboard/about/ecosysteme",
+          url: `${about}/ecosysteme`,
+          icon: TvMinimal,
         },
       ],
     },
   ],
-  navProjects: [
+  Projets: [
     {
-      title: "Missions E5",
-      url: "/dashboard/missions",
-      icon: Briefcase,
-      isActive: false,
-    },
-    {
-      title: "Projets E6",
-      url: "/dashboard/projets",
-      icon: Code2,
-      isActive: false,
-    },
-    {
-      title: "Veilles",
-      url: "/dashboard/veilles",
-      icon: Search,
+      id_group: 2,
+      title_group: "Projets",
+      group: [
+        {
+          title: "Missions E5",
+          url: `${dash}missions`,
+          icon: Briefcase,
+        },
+        {
+          title: "Projets E6",
+          url: `${dash}projets`,
+          icon: Code2,
+        },
+        {
+          title: "Veilles",
+          url: `${dash}veilles`,
+          icon: Search,
+        },
+      ],
     },
   ],
-
-  navSecondary: [
+  Contact: [
     {
-      title: "Contacts",
-      url: "/dashboard/contacts",
-      icon: Send,
+      id_group: 3,
+      title_group: "Contact",
+      group: [
+        {
+          title: "Contacts",
+          url: `${dash}contacts`,
+          icon: Send,
+        },
+      ],
     },
   ],
 };

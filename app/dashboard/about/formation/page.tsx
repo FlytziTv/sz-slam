@@ -11,12 +11,12 @@ export default function Formation() {
         <div className="flex flex-col gap-4 shrink-0">
           <div className="flex flex-row items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 text-white text-[10px] font-black uppercase tracking-[0.2em] w-fit">
             <Target size={10} className="fill-szcolor text-szcolor" />
-            <p>System_Education_Base</p>
+            <p>Formation_bts_sio_slam</p>
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter italic uppercase leading-[0.9]">
             Paris <br />
             <span className="text-szcolor font-outline-2 ">Ynov</span>{" "}
-            <span className="text-zinc-300 font-outline-2  transition-colors duration-500">
+            <span className="text-zinc-300 font-outline-2 transition-colors duration-500">
               Campus
             </span>
           </h1>

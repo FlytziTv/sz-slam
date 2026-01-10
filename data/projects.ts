@@ -12,8 +12,17 @@ export const projects_list = [
       "resend",
       "Vercel",
     ],
-    github: "https://github.com/FlytziTv/sz-slam",
-    status: "Production",
+    links: [
+      {
+        name: "GitHub",
+        url: "https://github.com/FlytziTv/sz-slam",
+      },
+      {
+        name: "Site Web",
+        url: "/",
+      },
+    ],
+    status: "Projet personnel (En formation Ynov)",
     size: "large", // Prend 2 colonnes
   },
   {
@@ -21,9 +30,32 @@ export const projects_list = [
     title: "Interface garage FiveM",
     desc: "Inferface utilisateur pour la gestion des garages dans les serveurs FiveM (GTA V). Permet aux joueurs de stocker, récupérer et gérer leurs véhicules en jeu.",
     tags: ["Next.js", "Tailwind", "TypeScript", "Lucide", "Vercel"],
-    github: "https://github.com/FlytziTv/sz-fivem",
-    linkpage: "https://sz-fivem.vercel.app/",
-    status: "Interface terminée",
+    links: [
+      {
+        name: "GitHub",
+        url: "https://github.com/FlytziTv/sz-fivem",
+      },
+      {
+        name: "Site Web",
+        url: "https://sz-fivem.vercel.app/",
+      },
+    ],
+    status: "Projet personnel",
+    size: "small",
+  },
+
+  {
+    id: 3,
+    title: "Appache",
+    desc: "Installation de Appache2 sur une machine virtuelle Ubuntu.",
+    tags: ["Appache", "Ubuntu", "Linux"],
+    links: [
+      {
+        name: "Documentation",
+        url: "/files/projets/mission/appache.pdf",
+      },
+    ],
+    status: "Projet en formation Ynov",
     size: "small",
   },
 ];

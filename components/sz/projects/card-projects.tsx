@@ -1,22 +1,35 @@
 import Link from "next/link";
 import { GithubIcon } from "@/components/Icons/github";
 import { Button } from "@/components/ui/button";
+import { ExternalLink, FileText } from "lucide-react";
 
 export default function CardProjects({
   title,
   desc,
   tags,
-  github,
+  links,
   status,
   size,
 }: {
   title: string;
   desc: string;
   tags: string[];
-  github: string;
+  links: { name: string; url: string }[];
   status: string;
   size: string;
 }) {
+  // Fonction pour déterminer l'icône en fonction du nom du lien
+  const getIcon = (name: string) => {
+    switch (name.toLowerCase()) {
+      case "github":
+        return <GithubIcon size={20} />;
+      case "documentation":
+        return <FileText size={20} />;
+      default:
+        return <ExternalLink size={20} />;
+    }
+  };
+
   return (
     <div
       className={`bg-white border border-border rounded-4xl p-8 flex flex-col justify-between gap-6 shadow-sm ${
@@ -28,14 +41,24 @@ export default function CardProjects({
           <span className="text-[10px] font-black text-szcolor uppercase tracking-widest italic flex items-center gap-2">
             <div className="h-1.5 w-1.5 rounded-full bg-szcolor" /> {status}
           </span>
-          <Link href={github} target="_blank">
-            <Button size={"icon"} variant={"ghost"} className="rounded-full">
-              <GithubIcon
-                size={20}
-                className="text-zinc-300 hover:text-zinc-900 transition-colors"
-              />
-            </Button>
-          </Link>
+
+          {/* Affichage dynamique des liens */}
+          <div className="flex gap-2">
+            {links.map((link, index) => (
+              <Link key={index} href={link.url} target="_blank">
+                <Button
+                  size={"icon"}
+                  variant={"ghost"}
+                  className="rounded-full"
+                  title={link.name}
+                >
+                  <span className="text-zinc-300 hover:text-zinc-900 transition-colors">
+                    {getIcon(link.name)}
+                  </span>
+                </Button>
+              </Link>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col gap-4">

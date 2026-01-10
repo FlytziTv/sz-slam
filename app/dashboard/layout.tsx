@@ -1,34 +1,36 @@
 "use client";
 
-import { AppSidebar } from "@/components/sz/nav/app-sidebar";
+import { SidebarProvider, useSidebar } from "@/components/sidebar/sz-sidebar";
+import { SZAppSidebar } from "@/components/sidebar/sz-app";
+import { cn } from "@/lib/utils";
 
-import {
-  SidebarInset,
-  SidebarProvider,
-  // SidebarTrigger,
-} from "@/components/ui/sidebar";
+function LayoutContent({ children }: { children: React.ReactNode }) {
+  const { isCollapsed } = useSidebar();
 
-export default function LayoutDash({
+  return (
+    <div className="flex w-full min-h-screen">
+      <SZAppSidebar />
+
+      <main
+        className={cn(
+          "flex-1 flex flex-col gap-4 p-4 bg-[#ffffff] transition-all duration-100",
+          isCollapsed ? "ml-16" : "ml-64"
+        )}
+      >
+        {children}
+      </main>
+    </div>
+  );
+}
+
+export default function DashLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <SidebarProvider
-      style={
-        {
-          "--sidebar-width": "19rem",
-        } as React.CSSProperties
-      }
-    >
-      <AppSidebar />
-      <SidebarInset>
-        {/* <header className="flex py-2 shrink-0 items-center gap-2">
-          <SidebarTrigger className="-ml-1" />
-        </header> */}
-
-        <div className="flex flex-1 flex-col gap-4 ">{children}</div>
-      </SidebarInset>
+    <SidebarProvider>
+      <LayoutContent>{children}</LayoutContent>
     </SidebarProvider>
   );
 }
