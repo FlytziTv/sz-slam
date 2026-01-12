@@ -50,7 +50,7 @@ export default function About() {
             <ArrowUpRight size={14} className="text-zinc-500" />
           </p>
         </div>
-        <Link href="/files/cv_alexis_dejesus-triel.pdf" target="_blank">
+        <Link href="/files/cv_alexis_dejesus_2026.pdf" target="_blank">
           <Button variant={"secondary"} size={"lg"} className="rounded-xl">
             Télécharger mon CV
           </Button>
