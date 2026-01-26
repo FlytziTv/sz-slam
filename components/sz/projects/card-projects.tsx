@@ -52,7 +52,7 @@ export default function CardProjects({
                   className="rounded-full"
                   title={link.name}
                 >
-                  <span className="text-zinc-300 hover:text-zinc-900 transition-colors">
+                  <span className="text-zinc-400 hover:text-zinc-900 transition-colors">
                     {getIcon(link.name)}
                   </span>
                 </Button>

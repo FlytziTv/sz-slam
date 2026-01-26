@@ -58,4 +58,64 @@ export const projects_list = [
     status: "Projet en formation Ynov",
     size: "small",
   },
+
+  {
+    id: 4,
+    title: "Installation Ubuntu VirtualBox",
+    desc: "Installation de Ubuntu sur une machine virtuelle via VirtualBox.",
+    tags: ["Ubuntu", "Linux", "VirtualBox"],
+    links: [
+      {
+        name: "Documentation",
+        url: "/files/projets/mission/ubuntu-vbox.pdf",
+      },
+    ],
+    status: "Projet en formation Ynov",
+    size: "small",
+  },
+
+  {
+    id: 5,
+    title: "Installation Ubuntu VMware",
+    desc: "Installation de Ubuntu sur une machine virtuelle via VMware.",
+    tags: ["Réseau", "Ubuntu", "Linux", "VMware"],
+    links: [
+      {
+        name: "Documentation",
+        url: "/files/projets/mission/ubuntu-vmware.pdf",
+      },
+    ],
+    status: "Projet en formation Ynov",
+    size: "small",
+  },
+
+  {
+    id: 6,
+    title: "Installation et configuration Windows Server 2025",
+    desc: "Installation et configuration de Windows Server 2025 sur une machine virtuelle.",
+    tags: ["Réseau", "Windows Server", "VMware"],
+    links: [
+      {
+        name: "Documentation",
+        url: "/files/projets/mission/windows-server-2025.pdf",
+      },
+    ],
+    status: "Projet en formation Ynov",
+    size: "small",
+  },
+
+  {
+    id: 7,
+    title: "Installation et configuration de Symfony",
+    desc: "Installation et configuration du framework Symfony.",
+    tags: ["Symfony", "PHP", "Composer"],
+    links: [
+      {
+        name: "Documentation",
+        url: "/files/projets/mission/symfony.pdf",
+      },
+    ],
+    status: "Projet en formation Ynov",
+    size: "small",
+  },
 ];

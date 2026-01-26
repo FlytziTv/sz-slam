@@ -109,6 +109,11 @@ export default function Formation() {
             </div>
           </Link>
         </div>
+        <div className="bg-white/20 col-span-4 backdrop-blur-md border border-border rounded-4xl p-6 flex flex-col justify-center items-start gap-6 px-12">
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-500 italic">
+            En recherche active de stages et d&apos;alternance
+          </span>
+        </div>
       </div>
     </div>
   );
