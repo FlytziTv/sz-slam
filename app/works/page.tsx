@@ -1,4 +1,3 @@
-import SearchCard from "@/components/card/SearchCard";
 import StudCard from "@/components/card/StudCard";
 import WorkCard from "@/components/card/WorkCard";
 import Header from "@/components/sz/header";
@@ -31,15 +30,7 @@ export default function Works() {
 
           <div className="flex flex-col w-full gap-4">
             <h2 className="text-xl font-semibold">Mon alternance / stage</h2>
-            <WorkCard
-              // image={work_data.image}
-              name={work_data.name}
-              type={work_data.type}
-              loc={work_data.loc}
-              slogan={work_data.slogan}
-              description={work_data.desc}
-              url={work_data.url}
-            />
+            <WorkCard />
           </div>
         </div>
       </main>
