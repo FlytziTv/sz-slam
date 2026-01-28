@@ -1,11 +1,11 @@
-import Alerte from "@/components/sz/Alerte";
 import Header from "@/components/sz/header";
+import TitleHeader from "@/components/sz/TitleHeader";
 
-export default function Home() {
+export default function Veilles() {
   return (
     <div className="flex flex-col min-h-screen bg-background font-sans">
       <Header />
-      <Alerte />
+      <TitleHeader title="Ma veille technologique" />
 
       <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center"></main>
     </div>

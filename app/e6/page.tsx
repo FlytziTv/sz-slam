@@ -1,11 +1,11 @@
-import Alerte from "@/components/sz/Alerte";
 import Header from "@/components/sz/header";
+import TitleHeader from "@/components/sz/TitleHeader";
 
-export default function Home() {
+export default function E6() {
   return (
     <div className="flex flex-col min-h-screen bg-background font-sans">
       <Header />
-      <Alerte />
+      <TitleHeader title="Mes projets E6" />
 
       <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center"></main>
     </div>
