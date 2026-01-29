@@ -13,26 +13,20 @@ export default function Works() {
 
       <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6">
         <div className="w-full grid grid-cols-2 gap-4">
-          <div className="flex flex-col w-full gap-4">
-            <h2 className="text-xl font-semibold">Mon école</h2>
-            <StudCard
-              image={formation_data.image}
-              name={formation_data.name}
-              type={formation_data.type}
-              loc={formation_data.loc}
-              slogan={formation_data.slogan}
-              description={formation_data.desc}
-              formation={formation_data.formation}
-              tel={formation_data.tel}
-              email={formation_data.email}
-              url={formation_data.url}
-            />
-          </div>
+          <StudCard
+            image={formation_data.image}
+            name={formation_data.name}
+            type={formation_data.type}
+            loc={formation_data.loc}
+            slogan={formation_data.slogan}
+            description={formation_data.desc}
+            formation={formation_data.formation}
+            tel={formation_data.tel}
+            email={formation_data.email}
+            url={formation_data.url}
+          />
 
-          <div className="flex flex-col w-full gap-4">
-            <h2 className="text-xl font-semibold">Mon alternance / stage</h2>
-            <WorkCard />
-          </div>
+          <WorkCard />
         </div>
       </main>
       <Footer />

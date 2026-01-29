@@ -1,22 +1,9 @@
-import { personal_data, about_study } from "@/data/about";
-import AboutStud from "./AboutStud";
+import { personal_data } from "@/data/about";
 
 export default function AboutMore() {
   return (
-    <div className="col-span-2 group relative bg-card w-full border border-border rounded-md flex flex-col p-4 gap-4">
+    <div className="group relative bg-card w-full border border-border rounded-md flex flex-col p-4 gap-4">
       <MinInfos title="Présentation" value={personal_data.presentation} />
-      {/* <MinInfosChildren title="Expériences professionnelles">
-        {about_study.map((study) => (
-          <AboutStud
-            key={study.id}
-            image={study.image}
-            title={study.title}
-            entreprise={study.entreprise}
-            date={study.date}
-            link={study.link}
-          />
-        ))}
-      </MinInfosChildren> */}
     </div>
   );
 }
@@ -38,7 +25,7 @@ export function MinInfosChildren({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="flex flex-col gap-1">
       <h4 className="text-sm text-muted-foreground">{title}</h4>
       {children}
     </div>

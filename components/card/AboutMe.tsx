@@ -4,19 +4,17 @@ import Link from "next/link";
 
 export default function AboutMe() {
   return (
-    <div className="col-span-1 group relative bg-card w-full border border-border rounded-md flex flex-col">
-      {/* <div className="h-full relative aspect-9/16 bg-white rounded-sm shrink-0 flex items-center justify-center ">
-        <Image src={image} alt={name} width={150} height={150} /> 
-        <h4 className="text-background text-6xl font-bold inline-block -rotate-90">
-          {personal_data.name}
-        </h4>
-      </div> */}
-      <div className="flex flex-col gap-4 items-start p-4 border-b border-border">
+    <div className="group relative bg-card w-full border border-border rounded-md grid grid-cols-3">
+      <div className="flex flex-col gap-4 items-start p-4 border-r border-border">
+        <MinInfos title="Prénom" value={personal_data.prenom} />
         <MinInfos title="Nom" value={personal_data.name} />
         <MinInfos title="Âge" value={personal_data.age} />
-        <MinInfos title="Localisation" value={personal_data.location} />
         <MinInfos title="Nationalité" value={personal_data.nationalite} />
+      </div>
+      <div className="flex flex-col gap-4 p-4 border-r border-border">
+        <MinInfos title="Localisation" value={personal_data.location} />
         <MinInfos title="Disponibilité" value={personal_data.disponibilite} />
+        <MinInfos title="Permis" value={personal_data.permis} />
       </div>
       <div className="flex flex-col gap-4 items-start p-4">
         {personal_data.link.map((link) => (

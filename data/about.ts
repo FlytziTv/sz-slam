@@ -12,11 +12,13 @@ if (
 }
 
 export const personal_data = {
-  name: "Alexis DE JESUS",
+  prenom: "Alexis",
+  name: "De Jesus",
   age: age + " ans",
   location: "Île-de-France, France",
   nationalite: "Française, Portugaise (en cours)",
   disponibilite: "Immédiate",
+  permis: "Permis B (Véhiculé)",
 
   link: [
     {
@@ -42,7 +44,9 @@ export const personal_data = {
   },
 
   presentation:
-    "Passionné par le développement web et mobile, je suis un jeune développeur de {age} ans basé en Île-de-France. Actuellement en formation en BTS SIO (Services Informatiques aux Organisations) à Paris Ynov Campus, je me spécialise dans le développement full-stack et mobile. J'ai acquis des compétences solides en JavaScript, TypeScript, React, Next.js, et Flutter à travers mes projets personnels et académiques. Curieux et motivé, je suis constamment à la recherche de nouvelles technologies et de défis pour améliorer mes compétences. Je suis ouvert à des opportunités de stage ou d'alternance pour mettre en pratique mes connaissances et contribuer à des projets innovants.",
+    "Passionné par le développement web et mobile, je suis un jeune développeur de " +
+    age +
+    " ans basé en Île-de-France. Actuellement en formation en BTS SIO (Services Informatiques aux Organisations) à Paris Ynov Campus, je me spécialise dans le développement full-stack et mobile. J'ai acquis des compétences solides en JavaScript, TypeScript, React, Next.js, et Flutter à travers mes projets personnels et académiques. Curieux et motivé, je suis constamment à la recherche de nouvelles technologies et de défis pour améliorer mes compétences. Je suis ouvert à des opportunités de stage ou d'alternance pour mettre en pratique mes connaissances et contribuer à des projets innovants.",
 };
 
 export const certif_data = [
@@ -380,43 +384,73 @@ export const search_data = [
 
 export const about_study = [
   {
+    id: 0,
+    color: "#FFFFFF",
+    image: "/img/icons/studs/lycée.png",
+    title: "Bac Pro EDPI ",
+    entreprise: "Lycée Simone Weil",
+    type: "Formation",
+    date: "septembre 2021 - juin 2024 · 3 ans",
+    link: "https://lyc-weil-conflans.ac-versailles.fr/",
+  },
+  {
     id: 1,
+    color: "#FE0000",
     image: "/img/icons/studs/eiffage.png",
     title: "Chargé d'études",
-    entreprise: "Eiffage · Stage",
+    entreprise: "Eiffage",
+    type: "Expérience Professionnelle - Stage",
     date: "mars 2022 - mars 2022 · 1 mois",
     link: "https://www.eiffage.com",
   },
   {
     id: 2,
+    color: "#FE0000",
     image: "/img/icons/studs/eiffage.png",
     title: "Chargé d'études",
-    entreprise: "Eiffage · Stage",
+    entreprise: "Eiffage",
+    type: "Expérience Professionnelle - Stage",
     date: "juin 2022 - juin 2022 · 1 mois",
     link: "https://www.eiffage.com",
   },
   {
     id: 3,
+    color: "#FE0000",
     image: "/img/icons/studs/eiffage.png",
     title: "Chargé d'études",
-    entreprise: "Eiffage · Stage",
+    entreprise: "Eiffage",
+    type: "Expérience Professionnelle - Stage",
     date: "mars 2023 - mars 2023 · 1 mois",
     link: "https://www.eiffage.com",
   },
   {
     id: 4,
+    color: "#FE0000",
     image: "/img/icons/studs/eiffage.png",
     title: "Chargé d'études",
-    entreprise: "Eiffage · Stage",
+    entreprise: "Eiffage",
+    type: "Expérience Professionnelle - Stage",
     date: "juin 2023 - juin 2023 · 1 mois",
     link: "https://www.eiffage.com",
   },
   {
     id: 5,
+    color: "#BD712B",
     image: "/img/icons/studs/new-mat.png",
     title: "Concepteur industriel",
-    entreprise: "New Mat Mécatronic · Stage",
+    entreprise: "New Mat Mécatronics",
+    type: "Expérience Professionnelle - Stage",
     date: "novembre 2023 - décembre 2023 · 2 mois",
-    link: "https://www.newmat.fr",
+    link: "https://www.new-mat.fr/",
+  },
+  {
+    id: 6,
+    color: "#FFFFFF",
+    image: "/img/icons/studs/ynov.svg",
+    title: "Bts SIO option SLAM",
+    entreprise: "Ynov Campus Paris",
+    type: "Formation",
+    date: "septembre 2025 - juin 2027 · 2 ans",
+    link: "/bts",
   },
 ];
