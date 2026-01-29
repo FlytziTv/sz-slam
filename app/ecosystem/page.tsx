@@ -1,5 +1,6 @@
 import ExCard from "@/components/card/ExCard";
 import SkillsCard from "@/components/card/SkillsCard";
+import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
 import { tools_data, additional_tools } from "@/data/about";
@@ -21,7 +22,7 @@ export default function Ecosysteme() {
       <Header />
       <TitleHeader title="Mon Écosystème" />
 
-      <main className="flex flex-col gap-8 min-w-340 mx-auto items-center justify-center">
+      <main className="flex flex-col gap-8 min-w-340 mx-auto items-center justify-center my-6">
         {Object.entries(groupedByCategory).map(([category, tools]) => (
           <div key={category} className="flex flex-col w-full gap-4">
             <h2 className="text-xl font-semibold">
@@ -60,6 +61,7 @@ export default function Ecosysteme() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

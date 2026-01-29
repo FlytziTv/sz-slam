@@ -28,7 +28,7 @@
   /* --- Statuts (Destructive, etc.) --- */
   --color-destructive: var(--status-error);
   --color-destructive-foreground: var(--text-primary);
-
+  --color-sztatus: var(--text-link);
   --color-success: var(--status-success);
   --color-warning: var(--status-warning);
 }

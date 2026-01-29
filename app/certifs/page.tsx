@@ -1,4 +1,5 @@
 import CertifCard from "@/components/card/CertifCard";
+import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
 import { certif_data } from "@/data/about";
@@ -20,7 +21,7 @@ export default function Certifs() {
       <Header />
       <TitleHeader title="Mes Certifications" />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center">
+      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6">
         {Object.entries(groupedByCategory).map(([category, certifs]) => (
           <div key={category} className="flex flex-col w-full gap-4">
             <h2 className="text-xl font-semibold">
@@ -45,6 +46,7 @@ export default function Certifs() {
           </div>
         ))}
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import StudCard from "@/components/card/StudCard";
 import WorkCard from "@/components/card/WorkCard";
+import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
 import { formation_data, work_data } from "@/data/about";
@@ -10,7 +11,7 @@ export default function Works() {
       <Header />
       <TitleHeader title="Mon école et mon alternance / stage" />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center">
+      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6">
         <div className="w-full grid grid-cols-2 gap-4">
           <div className="flex flex-col w-full gap-4">
             <h2 className="text-xl font-semibold">Mon école</h2>
@@ -34,6 +35,7 @@ export default function Works() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

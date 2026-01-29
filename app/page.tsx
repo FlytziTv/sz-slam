@@ -1,4 +1,5 @@
 import Alerte from "@/components/sz/Alerte";
+import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 
 export default function Home() {
@@ -7,7 +8,8 @@ export default function Home() {
       <Header />
       <Alerte />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center"></main>
+      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center mb-6"></main>
+      <Footer />
     </div>
   );
 }

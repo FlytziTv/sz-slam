@@ -1,3 +1,50 @@
+import { link } from "fs";
+
+const birthDate = new Date("2006-11-10");
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+const monthDiff = today.getMonth() - birthDate.getMonth();
+if (
+  monthDiff < 0 ||
+  (monthDiff === 0 && today.getDate() < birthDate.getDate())
+) {
+  age--;
+}
+
+export const personal_data = {
+  name: "Alexis DE JESUS",
+  age: age + " ans",
+  location: "Île-de-France, France",
+  nationalite: "Française, Portugaise (en cours)",
+  disponibilite: "Immédiate",
+
+  link: [
+    {
+      id: 1,
+      title: "LinkedIn",
+      value: "https://www.linkedin.com/in/alexis-dejesus",
+    },
+    {
+      id: 2,
+      title: "GitHub",
+      value: "https://www.github.com/FlytziTv",
+    },
+    {
+      id: 3,
+      title: "Mail Scolaire",
+      value: "mailto:alexis.dejesus@example.com",
+    },
+  ],
+
+  cv: {
+    title: "Mon cv",
+    value: "/files/cv_alexis_dejesus.pdf",
+  },
+
+  presentation:
+    "Passionné par le développement web et mobile, je suis un jeune développeur de {age} ans basé en Île-de-France. Actuellement en formation en BTS SIO (Services Informatiques aux Organisations) à Paris Ynov Campus, je me spécialise dans le développement full-stack et mobile. J'ai acquis des compétences solides en JavaScript, TypeScript, React, Next.js, et Flutter à travers mes projets personnels et académiques. Curieux et motivé, je suis constamment à la recherche de nouvelles technologies et de défis pour améliorer mes compétences. Je suis ouvert à des opportunités de stage ou d'alternance pour mettre en pratique mes connaissances et contribuer à des projets innovants.",
+};
+
 export const certif_data = [
   {
     id: 1,
@@ -328,5 +375,48 @@ export const search_data = [
       "Gestion de bases de données (SQL).",
       "Participation à la rédaction de documentations techniques.",
     ],
+  },
+];
+
+export const about_study = [
+  {
+    id: 1,
+    image: "/img/icons/studs/eiffage.png",
+    title: "Chargé d'études",
+    entreprise: "Eiffage · Stage",
+    date: "mars 2022 - mars 2022 · 1 mois",
+    link: "https://www.eiffage.com",
+  },
+  {
+    id: 2,
+    image: "/img/icons/studs/eiffage.png",
+    title: "Chargé d'études",
+    entreprise: "Eiffage · Stage",
+    date: "juin 2022 - juin 2022 · 1 mois",
+    link: "https://www.eiffage.com",
+  },
+  {
+    id: 3,
+    image: "/img/icons/studs/eiffage.png",
+    title: "Chargé d'études",
+    entreprise: "Eiffage · Stage",
+    date: "mars 2023 - mars 2023 · 1 mois",
+    link: "https://www.eiffage.com",
+  },
+  {
+    id: 4,
+    image: "/img/icons/studs/eiffage.png",
+    title: "Chargé d'études",
+    entreprise: "Eiffage · Stage",
+    date: "juin 2023 - juin 2023 · 1 mois",
+    link: "https://www.eiffage.com",
+  },
+  {
+    id: 5,
+    image: "/img/icons/studs/new-mat.png",
+    title: "Concepteur industriel",
+    entreprise: "New Mat Mécatronic · Stage",
+    date: "novembre 2023 - décembre 2023 · 2 mois",
+    link: "https://www.newmat.fr",
   },
 ];

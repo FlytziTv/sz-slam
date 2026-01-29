@@ -1,5 +1,6 @@
 import BtsCard from "@/components/card/BtsCard";
 import BtsOptionCard from "@/components/card/BtsOptionCard";
+import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
 import { bts_data, bts_option_data } from "@/data/stud";
@@ -10,7 +11,7 @@ export default function Bts() {
       <Header />
       <TitleHeader title="Mon Bts" />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center">
+      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6">
         <div className="grid grid-cols-2 gap-6 ">
           <BtsCard
             name={bts_data.name}
@@ -32,6 +33,7 @@ export default function Bts() {
           ))}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
