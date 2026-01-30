@@ -11,8 +11,8 @@ export default function Works() {
       <Header />
       <TitleHeader title="Mon école et mon alternance / stage" />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6">
-        <div className="w-full grid grid-cols-2 gap-4">
+      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6 px-6">
+        <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-4">
           <StudCard
             image={formation_data.image}
             name={formation_data.name}

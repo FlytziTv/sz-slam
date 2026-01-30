@@ -11,9 +11,10 @@ export default function Bts() {
       <Header />
       <TitleHeader title="Mon Bts" />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6">
-        <div className="grid grid-cols-2 gap-6 ">
+      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6 px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
           <BtsCard
+            className="col-span-1 lg:col-span-2"
             name={bts_data.name}
             designation={bts_data.designation}
             time={bts_data.time}

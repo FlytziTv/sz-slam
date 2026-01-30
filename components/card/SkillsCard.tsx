@@ -16,7 +16,7 @@ export default function SkillsCard({
 }) {
   return (
     <div
-      className="group relative bg-card w-full border border-border rounded-md p-4 gap-4 flex flex-row transition-colors duration-150 hover:border-(--certif-color)"
+      className="group relative bg-card w-full border border-border rounded-md p-4 gap-4 flex flex-row transition-colors duration-150 hover:border-[--certif-color]"
       style={{ "--certif-color": color } as React.CSSProperties}
     >
       <Image

@@ -11,9 +11,24 @@ export function SZInfos({
   return (
     <div>
       <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium line-clamp-2">
+      <p className="text-sm text-foreground font-medium line-clamp-3">
         {value}
       </p>
+    </div>
+  );
+}
+
+export function SZInfosMore({
+  title,
+  value,
+}: {
+  title: string;
+  value: string | undefined;
+}) {
+  return (
+    <div>
+      <h4 className="text-sm text-muted-foreground">{title}</h4>
+      <p className="text-sm text-foreground font-medium">{value}</p>
     </div>
   );
 }

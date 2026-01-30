@@ -49,7 +49,7 @@ export default function Contact() {
     <div className="flex flex-col min-h-screen bg-background font-sans">
       <Header />
 
-      <main className="flex flex-col gap-8 min-w-340 m-auto items-center justify-center">
+      <main className="flex-1 flex flex-col gap-8 w-full max-w-340 mx-auto items-center justify-center my-6 px-6">
         <div className="w-full bg-card border border-border rounded-md flex flex-col">
           <div className="w-full flex flex-col p-6 border-b border-border">
             <h2 className="text-3xl font-semibold">Contactez-moi</h2>

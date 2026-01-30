@@ -12,10 +12,11 @@ export default function About() {
       <Header />
       <TitleHeader title="À propos" />
 
-      <main className="flex flex-col gap-4 max-w-340 mx-auto justify-center my-6">
+      <main className="flex flex-col gap-4 max-w-340 mx-auto justify-center my-6 px-6">
         <AboutMe />
         <AboutMore />
-        <div className="col-span-3 w-full grid grid-cols-2 gap-4 ">
+
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 ">
           {/* Commence par l'id le plus récent */}
           {[...about_study].reverse().map((study) => (
             <AboutStud
