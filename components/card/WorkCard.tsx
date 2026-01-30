@@ -1,10 +1,29 @@
-import { search_data } from "@/data/about";
-
-import { SquareArrowOutUpRight } from "lucide-react";
 // import Image from "next/image";
-import Link from "next/link";
 
-export default function WorkCard() {
+import Link from "next/link";
+import { SZInfos } from "../sz/SZInfos";
+
+export default function WorkCard({
+  title_alternance,
+  rythme_alternance,
+  disponibilite_alternance,
+  durée_alternance,
+  objectif_alternance,
+  title_stage,
+  periode_stage,
+  durée_stage,
+  mission_stage,
+}: {
+  title_alternance: string | undefined;
+  rythme_alternance: string | undefined;
+  disponibilite_alternance: string | undefined;
+  durée_alternance: string | undefined;
+  objectif_alternance: string | undefined;
+  title_stage: string | undefined;
+  periode_stage: string | undefined;
+  durée_stage: string | undefined;
+  mission_stage: string[] | undefined;
+}) {
   return (
     <div className="h-full group relative bg-card w-full border border-border rounded-md flex flex-col">
       <div className="m-4 mb-0 h-71 relative aspect-9/16 bg-white rounded-sm shrink-0 flex flex-col items-center justify-center ">
@@ -16,31 +35,26 @@ export default function WorkCard() {
       </div>
       <div className="flex flex-col gap-4 p-4 border-b border-border">
         <h6 className="text-base text-foreground font-medium">
-          {search_data[0].title}
+          {title_alternance}
         </h6>
         <div className="w-full grid grid-cols-2 gap-6">
-          <MinInfos title="Rytme" value={search_data[0].rythme} />
-          <MinInfos
-            title="Disponibilite"
-            value={search_data[0].disponibilite}
-          />
+          <SZInfos title="Rythme" value={rythme_alternance} />
+          <SZInfos title="Disponibilité" value={disponibilite_alternance} />
         </div>
-        <MinInfos title="Durée" value={search_data[0].durée} />
-        <MinInfos title="Objectif" value={search_data[0].objectif} />
+        <SZInfos title="Durée" value={durée_alternance} />
+        <SZInfos title="Objectif" value={objectif_alternance} />
       </div>
 
       <div className="flex flex-col gap-4 p-4 border-b border-border">
-        <h6 className="text-base text-foreground font-medium">
-          {search_data[1].title}
-        </h6>
+        <h6 className="text-base text-foreground font-medium">{title_stage}</h6>
         <div className="w-full grid grid-cols-2 gap-6">
-          <MinInfos title="Période" value={search_data[1].periode} />
-          <MinInfos title="Durée" value={search_data[1].durée} />
+          <SZInfos title="Période" value={periode_stage} />
+          <SZInfos title="Durée" value={durée_stage} />
         </div>
 
         <div>
           <h4 className="text-sm text-muted-foreground">Mission</h4>
-          {search_data[1].mission?.map((task, index) => (
+          {mission_stage?.map((task, index) => (
             <p key={index} className="text-sm text-foreground font-medium">
               - {task}
             </p>
@@ -51,7 +65,7 @@ export default function WorkCard() {
         <p className="text-sm">
           Me contacter via{" "}
           <a
-            className="text-(--text-link) underline hover:text-(--text-link)/80 transition-colors duration-150"
+            className="text-sz-status underline hover:text-(--text-link)/80 transition-colors duration-150"
             href="https://www.linkedin.com/in/alexis-dejesus/"
             target="_blank"
             rel="noopener noreferrer"
@@ -66,47 +80,6 @@ export default function WorkCard() {
           Me contacter
         </Link>
       </div>
-    </div>
-  );
-}
-
-export function MinInfos({
-  title,
-  value,
-}: {
-  title: string;
-  value: string | undefined;
-}) {
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium">{value}</p>
-    </div>
-  );
-}
-
-export function MinInfosLink({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  const displayValue = value
-    .replace(/^https?:\/\//, "") // Supprime http:// ou https://
-    .replace(/^\/files\/certif\//, ""); // Supprime le chemin du dossier
-
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <Link
-        href={value}
-        target="_blank"
-        className="text-sm text-foreground font-medium line-clamp-2 hover:underline cursor-pointer"
-      >
-        {displayValue}
-        <SquareArrowOutUpRight size={12} className="inline ml-1" />
-      </Link>
     </div>
   );
 }

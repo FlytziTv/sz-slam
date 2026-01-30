@@ -2,7 +2,7 @@ import CertifCard from "@/components/card/CertifCard";
 import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
-import { certif_data } from "@/data/about";
+import { certif_data } from "@/data/certifs";
 
 export default function Certifs() {
   const groupedByCategory = certif_data.reduce(

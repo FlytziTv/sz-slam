@@ -3,7 +3,7 @@ import SkillsCard from "@/components/card/SkillsCard";
 import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
-import { tools_data, additional_tools } from "@/data/about";
+import { tools_data, additional_tools } from "@/data/ecosystem";
 
 export default function Ecosysteme() {
   const groupedByCategory = tools_data.reduce(

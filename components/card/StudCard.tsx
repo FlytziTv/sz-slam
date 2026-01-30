@@ -1,6 +1,5 @@
-import { SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { SZInfos, SZInfosLink } from "../sz/SZInfos";
 
 export default function StudCard({
   image,
@@ -32,13 +31,13 @@ export default function StudCard({
       </div>
       <div className="flex flex-col gap-4 items-start ">
         <div className="w-full grid grid-cols-2 gap-6">
-          <MinInfos title="Nom" value={name} />
-          <MinInfos title="Type" value={type} />
+          <SZInfos title="Nom" value={name} />
+          <SZInfos title="Type" value={type} />
         </div>
 
-        <MinInfos title="Localisation" value={loc} />
-        <MinInfos title="Slogan" value={slogan} />
-        <MinInfos title="Description" value={description} />
+        <SZInfos title="Localisation" value={loc} />
+        <SZInfos title="Slogan" value={slogan} />
+        <SZInfos title="Description" value={description} />
 
         <div>
           <h4 className="text-sm text-muted-foreground">Formation</h4>
@@ -50,47 +49,12 @@ export default function StudCard({
         </div>
 
         <div className="w-full grid grid-cols-2 gap-6">
-          <MinInfos title="Téléphone" value={tel} />
-          <MinInfos title="Email" value={email} />
+          <SZInfos title="Téléphone" value={tel} />
+          <SZInfos title="Email" value={email} />
         </div>
 
-        <MinInfosLink title="Lien du site" value={url} />
+        <SZInfosLink title="Lien du site" value={url} />
       </div>
-    </div>
-  );
-}
-
-export function MinInfos({ title, value }: { title: string; value: string }) {
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium">{value}</p>
-    </div>
-  );
-}
-
-export function MinInfosLink({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  const displayValue = value
-    .replace(/^https?:\/\//, "") // Supprime http:// ou https://
-    .replace(/^\/files\/certif\//, ""); // Supprime le chemin du dossier
-
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <Link
-        href={value}
-        target="_blank"
-        className="text-sm text-foreground font-medium line-clamp-2 hover:underline cursor-pointer"
-      >
-        {displayValue}
-        <SquareArrowOutUpRight size={12} className="inline ml-1" />
-      </Link>
     </div>
   );
 }

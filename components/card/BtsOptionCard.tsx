@@ -1,6 +1,5 @@
-import { SquareArrowOutUpRight } from "lucide-react";
 // import Image from "next/image";
-import Link from "next/link";
+import { SZInfos, SZInfosLink } from "../sz/SZInfos";
 
 export default function BtsOptionCard({
   name,
@@ -21,12 +20,9 @@ export default function BtsOptionCard({
         <Image src={image} alt={name} width={250} height={250} />
       </div> */}
       <div className="flex flex-col gap-4 items-start ">
-        <MinInfos title="Nom" value={name} />
-
-        <MinInfos title="Désignation" value={designation} />
-
-        <MinInfos title="Description" value={description} />
-
+        <SZInfos title="Nom" value={name} />
+        <SZInfos title="Désignation" value={designation} />
+        <SZInfos title="Description" value={description} />
         <div>
           <h4 className="text-sm text-muted-foreground">Débouchés</h4>
           {debouche.map((form, index) => (
@@ -35,44 +31,8 @@ export default function BtsOptionCard({
             </p>
           ))}
         </div>
-
-        <MinInfosLink title="En savoir plus" value={url} />
+        <SZInfosLink title="En savoir plus" value={url} />
       </div>
-    </div>
-  );
-}
-
-export function MinInfos({ title, value }: { title: string; value: string }) {
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium">{value}</p>
-    </div>
-  );
-}
-
-export function MinInfosLink({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  const displayValue = value
-    .replace(/^https?:\/\//, "") // Supprime http:// ou https://
-    .replace(/^\/files\/certif\//, ""); // Supprime le chemin du dossier
-
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <Link
-        href={value}
-        target="_blank"
-        className="text-sm text-foreground font-medium line-clamp-2 hover:underline cursor-pointer"
-      >
-        {displayValue}
-        <SquareArrowOutUpRight size={12} className="inline ml-1" />
-      </Link>
     </div>
   );
 }

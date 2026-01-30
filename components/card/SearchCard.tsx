@@ -1,4 +1,5 @@
-import { search_data } from "@/data/about";
+import { search_data } from "@/data/works";
+import { SZInfos } from "../sz/SZInfos";
 
 export default function SearchCard() {
   return (
@@ -8,27 +9,12 @@ export default function SearchCard() {
           {search_data[0].title}
         </h6>
         <div className="w-full grid grid-cols-2 gap-6">
-          <MinInfos title="Rytme" value={search_data[0].rythme} />
-          <MinInfos title="Période" value={search_data[0].disponibilite} />
+          <SZInfos title="Rytme" value={search_data[0].rythme} />
+          <SZInfos title="Période" value={search_data[0].disponibilite} />
         </div>
-        <MinInfos title="Durée" value={search_data[0].durée} />
-        <MinInfos title="Objectif" value={search_data[0].objectif} />
+        <SZInfos title="Durée" value={search_data[0].durée} />
+        <SZInfos title="Objectif" value={search_data[0].objectif} />
       </div>
-    </div>
-  );
-}
-
-export function MinInfos({
-  title,
-  value,
-}: {
-  title: string;
-  value: string | undefined;
-}) {
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium">{value}</p>
     </div>
   );
 }

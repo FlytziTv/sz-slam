@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { SZLogo } from "@/components/icons/logo";
 import Header from "@/components/sz/header";
 // import TitleHeader from "@/components/sz/TitleHeader";
 import { questions_data, choises_data } from "@/data/contact";
+import { SZMessage } from "@/components/sz/SZMessage";
 
 export default function Contact() {
   // Gestion de l'état du formulaire
@@ -70,7 +70,7 @@ export default function Contact() {
               autoComplete="off"
             />
 
-            <Message message={questions_data[0].question}>
+            <SZMessage message={questions_data[0].question}>
               <input
                 name="name"
                 type="text"
@@ -78,9 +78,9 @@ export default function Contact() {
                 placeholder="Votre nom complet"
                 required
               />
-            </Message>
+            </SZMessage>
 
-            <Message message={questions_data[1].question}>
+            <SZMessage message={questions_data[1].question}>
               <input
                 name="email"
                 type="email"
@@ -88,15 +88,16 @@ export default function Contact() {
                 placeholder="Votre adresse email"
                 required
               />
-            </Message>
+            </SZMessage>
 
-            <Message message={questions_data[2].question}>
+            <SZMessage message={questions_data[2].question}>
               <select
                 name="motif"
+                defaultValue="none"
                 className="w-full p-2 border border-input rounded-md bg-background text-foreground text-sm py-2 px-2.5 placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 focus-visible:outline-none "
                 required
               >
-                <option value="" disabled selected>
+                <option value="none" disabled>
                   Choisir un motif
                 </option>
                 {choises_data.map((choice, index) => (
@@ -105,9 +106,9 @@ export default function Contact() {
                   </option>
                 ))}
               </select>
-            </Message>
+            </SZMessage>
 
-            <Message message={questions_data[3].question}>
+            <SZMessage message={questions_data[3].question}>
               <textarea
                 name="message"
                 className=" w-full p-2 border border-input rounded-md min-h-24 max-h-63 bg-background text-foreground text-sm py-2 px-2.5 placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-3 focus-visible:outline-none"
@@ -121,30 +122,22 @@ export default function Contact() {
               >
                 {loading ? "Envoi..." : "Envoyer"}
               </button>
-            </Message>
+            </SZMessage>
 
             {status === "success" && (
               <div className="animate-in fade-in slide-in-from-top-2 duration-300">
-                <Message
-                  message={
-                    <span className="text-green-500">
-                      C&apos;est tout bon ! Ton message a été envoyé avec
-                      succès. Je te réponds dès que possible.
-                    </span>
-                  }
+                <SZMessage
+                  className="text-green-500"
+                  message="C'est tout bon ! Ton message a été envoyé avec succès. Je te réponds dès que possible."
                 />
               </div>
             )}
 
             {status === "error" && (
               <div className="animate-in fade-in slide-in-from-top-2 duration-300">
-                <Message
-                  message={
-                    <span className="text-red-500">
-                      Oups, il y a eu un petit problème technique. Peux-tu
-                      réessayer ou passer par LinkedIn ?
-                    </span>
-                  }
+                <SZMessage
+                  className="text-destructive"
+                  message="Oups, il y a eu un petit problème technique. Peux-tu réessayer ou passer par LinkedIn ?"
                 />
               </div>
             )}
@@ -163,26 +156,6 @@ export default function Contact() {
           </div>
         </div>
       </main>
-    </div>
-  );
-}
-
-export function Message({
-  message,
-  children,
-}: {
-  message: string | React.ReactNode;
-  children?: React.ReactNode;
-}) {
-  return (
-    <div className=" flex flex-row gap-4 items-start w-full ">
-      <div className="h-7.5 w-7.5 flex items-center justify-center rounded-full ">
-        <SZLogo size={20} />
-      </div>
-      <div className="flex flex-col gap-2 mt-0.75 w-full relative">
-        <p>{message}</p>
-        {children}
-      </div>
     </div>
   );
 }

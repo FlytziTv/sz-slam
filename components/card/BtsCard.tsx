@@ -1,5 +1,4 @@
-import { SquareArrowOutUpRight } from "lucide-react";
-import Link from "next/link";
+import { SZInfos } from "../sz/SZInfos";
 
 export default function BtsCard({
   name,
@@ -23,11 +22,11 @@ export default function BtsCard({
         </h4>
       </div>
       <div className="flex flex-col gap-4 items-start ">
-        <MinInfos title="Nom" value={name} />
-        <MinInfos title="Désignation" value={designation} />
+        <SZInfos title="Nom" value={name} />
+        <SZInfos title="Désignation" value={designation} />
 
-        <MinInfos title="Durée" value={time} />
-        <MinInfos title="Description" value={description} />
+        <SZInfos title="Durée" value={time} />
+        <SZInfos title="Description" value={description} />
 
         <div>
           <h4 className="text-sm text-muted-foreground">Débouchés</h4>
@@ -38,43 +37,6 @@ export default function BtsCard({
           ))}
         </div>
       </div>
-    </div>
-  );
-}
-
-export function MinInfos({ title, value }: { title: string; value: string }) {
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium line-clamp-2">
-        {value}
-      </p>
-    </div>
-  );
-}
-
-export function MinInfosLink({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  const displayValue = value
-    .replace(/^https?:\/\//, "") // Supprime http:// ou https://
-    .replace(/^\/files\/certif\//, ""); // Supprime le chemin du dossier
-
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <Link
-        href={value}
-        target="_blank"
-        className="text-sm text-foreground font-medium line-clamp-2 hover:underline cursor-pointer"
-      >
-        {displayValue}
-        <SquareArrowOutUpRight size={12} className="inline ml-1" />
-      </Link>
     </div>
   );
 }

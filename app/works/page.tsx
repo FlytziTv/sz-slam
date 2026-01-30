@@ -3,7 +3,7 @@ import WorkCard from "@/components/card/WorkCard";
 import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
-import { formation_data, work_data } from "@/data/about";
+import { formation_data, search_data } from "@/data/works";
 
 export default function Works() {
   return (
@@ -26,7 +26,17 @@ export default function Works() {
             url={formation_data.url}
           />
 
-          <WorkCard />
+          <WorkCard
+            title_alternance={search_data[0].title}
+            rythme_alternance={search_data[0].rythme}
+            disponibilite_alternance={search_data[0].disponibilite}
+            durée_alternance={search_data[0].durée}
+            objectif_alternance={search_data[0].objectif}
+            title_stage={search_data[1].title}
+            periode_stage={search_data[1].periode}
+            durée_stage={search_data[1].durée}
+            mission_stage={search_data[1].mission}
+          />
         </div>
       </main>
       <Footer />

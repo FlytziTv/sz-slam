@@ -1,8 +1,7 @@
 import Footer from "@/components/sz/footer";
 import Header from "@/components/sz/header";
 import TitleHeader from "@/components/sz/TitleHeader";
-import { MinInfos, MinInfosLink } from "@/components/card/StudCard";
-import { Bot } from "lucide-react";
+import { SZInfos, SZInfosLink } from "@/components/sz/SZInfos";
 
 export default function MentionsLegales() {
   return (
@@ -18,11 +17,11 @@ export default function MentionsLegales() {
               Édition du site
             </h2>
             <div className="grid grid-cols-2 gap-6">
-              <MinInfos title="Éditeur" value="Alexis De Jesus" />
-              <MinInfos title="Pseudo" value="Flytzi" />
+              <SZInfos title="Éditeur" value="Alexis De Jesus" />
+              <SZInfos title="Pseudo" value="Flytzi" />
             </div>
-            <MinInfos title="Rôle" value="Développeur Fullstack & Étudiant" />
-            <MinInfosLink title="Contact" value="/contact" />
+            <SZInfos title="Rôle" value="Développeur Fullstack & Étudiant" />
+            <SZInfosLink title="Contact" value="/contact" />
             {/* À vérifier si c'est le bon email */}
           </section>
 
@@ -32,11 +31,11 @@ export default function MentionsLegales() {
               Hébergement & Infra
             </h2>
             <div className="grid grid-cols-2 gap-6">
-              <MinInfos title="Hébergeur" value="Vercel Inc." />
-              <MinInfos title="Nom de domaine" value="OVH Cloud" />
+              <SZInfos title="Hébergeur" value="Vercel Inc." />
+              <SZInfos title="Nom de domaine" value="OVH Cloud" />
             </div>
-            <MinInfos title="Source" value="GitHub (Private Repository)" />
-            <MinInfosLink
+            <SZInfos title="Source" value="GitHub (Private Repository)" />
+            <SZInfosLink
               title="Site de l'hébergeur"
               value="https://vercel.com"
             />
@@ -54,10 +53,10 @@ export default function MentionsLegales() {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-2">
-              <MinInfos title="Framework" value="Next.js 16" />
-              <MinInfos title="Librairie" value="React 19" />
-              <MinInfos title="Styling" value="Tailwind CSS 4" />
-              <MinInfos title="Icons" value="Lucide React" />
+              <SZInfos title="Framework" value="Next.js 16" />
+              <SZInfos title="Librairie" value="React 19" />
+              <SZInfos title="Styling" value="Tailwind CSS 4" />
+              <SZInfos title="Icons" value="Lucide React" />
             </div>
           </section>
 

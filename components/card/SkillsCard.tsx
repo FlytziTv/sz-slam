@@ -1,6 +1,5 @@
-import { SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { SZInfos, SZInfosLink } from "../sz/SZInfos";
 
 export default function SkillsCard({
   url,
@@ -28,48 +27,11 @@ export default function SkillsCard({
         className="absolute shrink-0 right-2.5 top-2.5"
       />
       <div className="flex flex-col gap-4 items-start w-full">
-        <MinInfos title="Nom" value={titre} />
-        <MinInfos title="Appris en" value={status}></MinInfos>
+        <SZInfos title="Nom" value={titre} />
+        <SZInfos title="Appris en" value={status} />
 
-        <MinInfosLink title="En savoir plus" value={url} />
+        <SZInfosLink title="En savoir plus" value={url} />
       </div>
-    </div>
-  );
-}
-
-export function MinInfos({ title, value }: { title: string; value: string }) {
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium line-clamp-2">
-        {value}
-      </p>
-    </div>
-  );
-}
-
-export function MinInfosLink({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  const displayValue = value
-    .replace(/^https?:\/\//, "") // Supprime http:// ou https://
-    .replace(/^\/files\/certif\//, ""); // Supprime le chemin du dossier
-
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <Link
-        href={value}
-        target="_blank"
-        className="text-sm text-foreground font-medium line-clamp-2 hover:underline cursor-pointer"
-      >
-        {displayValue}
-        <SquareArrowOutUpRight size={12} className="inline ml-1" />
-      </Link>
     </div>
   );
 }

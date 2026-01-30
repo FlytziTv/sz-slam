@@ -1,6 +1,5 @@
-import { SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { SZInfos, SZInfosLink } from "../sz/SZInfos";
 
 export default function CertifCard({
   status,
@@ -27,55 +26,18 @@ export default function CertifCard({
         <Image src={image} alt={name} width={150} height={150} />
       </div>
       <div className="flex flex-col gap-4 items-start ">
-        <MinInfos title="Nom" value={name} />
-        <MinInfos title="Categorie" value={categorie} />
+        <SZInfos title="Nom" value={name} />
+        <SZInfos title="Categorie" value={categorie} />
         <div className="w-full flex flex-row gap-6">
-          <MinInfos title="Obtenu en" value={status} />
-          <MinInfos title="Date" value={date.toString()} />
+          <SZInfos title="Obtenu en" value={status} />
+          <SZInfos title="Date" value={date.toString()} />
         </div>
-        <MinInfos title="Description" value={description} />
+        <SZInfos title="Description" value={description} />
         <div className="w-full flex flex-row gap-6">
-          <MinInfosLink title="Source" value={url} />
-          <MinInfosLink title="Certification" value={pdf} />
+          <SZInfosLink title="Source" value={url} />
+          <SZInfosLink title="Certification" value={pdf} />
         </div>
       </div>
-    </div>
-  );
-}
-
-export function MinInfos({ title, value }: { title: string; value: string }) {
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <p className="text-sm text-foreground font-medium line-clamp-2">
-        {value}
-      </p>
-    </div>
-  );
-}
-
-export function MinInfosLink({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  const displayValue = value
-    .replace(/^https?:\/\//, "") // Supprime http:// ou https://
-    .replace(/^\/files\/certif\//, ""); // Supprime le chemin du dossier
-
-  return (
-    <div>
-      <h4 className="text-sm text-muted-foreground">{title}</h4>
-      <Link
-        href={value}
-        target="_blank"
-        className="text-sm text-foreground font-medium line-clamp-2 hover:underline cursor-pointer"
-      >
-        {displayValue}
-        <SquareArrowOutUpRight size={12} className="inline ml-1" />
-      </Link>
     </div>
   );
 }
