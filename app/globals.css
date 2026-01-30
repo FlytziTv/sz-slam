@@ -63,3 +63,18 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans);
 }
+
+/* globals.css */
+
+@layer utilities {
+  /* Pour Chrome, Safari et Opera */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Pour IE, Edge et Firefox */
+  .scrollbar-none {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
