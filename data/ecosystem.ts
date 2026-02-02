@@ -40,6 +40,15 @@ export const tools_data = [
   },
   {
     id: 5,
+    name: "PHP",
+    image: "/img/icons/skills/php.svg",
+    categorie: "Langages",
+    link: "https://www.php.net",
+    color: "#777BB4",
+    status: "Formation [BTS SIO SLAM]",
+  },
+  {
+    id: 6,
     name: "Lua",
     image: "/img/icons/skills/lua.svg",
     categorie: "Langages",
@@ -52,7 +61,7 @@ export const tools_data = [
   // Frameworks & Tech
   // =====================
   {
-    id: 6,
+    id: 7,
     name: "React",
     image: "/img/icons/skills/react.svg",
     categorie: "Frameworks & Tech",
@@ -61,7 +70,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 7,
+    id: 8,
     name: "Vue.js",
     image: "/img/icons/skills/vue.svg",
     categorie: "Frameworks & Tech",
@@ -70,7 +79,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 8,
+    id: 9,
     name: "Next.js",
     image: "/img/icons/skills/nextjs.svg",
     categorie: "Frameworks & Tech",
@@ -79,7 +88,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 9,
+    id: 10,
     name: "Tailwind CSS",
     image: "/img/icons/skills/tailwindcss.svg",
     categorie: "Frameworks & Tech",
@@ -88,7 +97,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 10,
+    id: 11,
     name: "Node.js",
     image: "/img/icons/skills/nodejs.svg",
     categorie: "Frameworks & Tech",
@@ -97,7 +106,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 11,
+    id: 12,
     name: "MySQL",
     image: "/img/icons/skills/mysql.svg",
     categorie: "Frameworks & Tech",
@@ -106,7 +115,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 12,
+    id: 13,
     name: "Git",
     image: "/img/icons/logiciel/git.svg",
     categorie: "Frameworks & Tech",
@@ -114,12 +123,21 @@ export const tools_data = [
     color: "#DE4C36",
     status: "Autodidacte",
   },
+  {
+    id: 14,
+    name: "Symfony",
+    image: "/img/icons/skills/symfony.svg",
+    categorie: "Frameworks & Tech",
+    link: "https://symfony.com",
+    color: "#000000",
+    status: "Formation [BTS SIO SLAM]",
+  },
 
   // =====================
   // Outils & Logiciels
   // =====================
   {
-    id: 13,
+    id: 15,
     name: "Visual Studio Code",
     image: "/img/icons/logiciel/vscode.svg",
     categorie: "Outils & Logiciels",
@@ -128,7 +146,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 14,
+    id: 16,
     name: "Figma",
     image: "/img/icons/logiciel/figma.svg",
     categorie: "Outils & Logiciels",
@@ -137,25 +155,25 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 15,
+    id: 17,
     name: "SolidWorks",
     image: "/img/icons/logiciel/solidworks.svg",
     categorie: "Outils & Logiciels",
     link: "https://www.solidworks.com/fr",
     color: "#EE2722",
-    status: "Frormation [Bac Pro]",
+    status: "Formation [Bac Pro]",
   },
   {
-    id: 16,
+    id: 18,
     name: "AutoCAD",
     image: "/img/icons/logiciel/autocad.svg",
     categorie: "Outils & Logiciels",
     link: "https://www.autodesk.com/autocad",
     color: "#E51050",
-    status: "Frormation [Bac Pro]",
+    status: "Formation [Bac Pro]",
   },
   {
-    id: 17,
+    id: 19,
     name: "Fusion 360",
     image: "/img/icons/logiciel/fusion360.svg",
     categorie: "Outils & Logiciels",
@@ -164,7 +182,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 18,
+    id: 20,
     name: "Blender",
     image: "/img/icons/logiciel/blender.svg",
     categorie: "Outils & Logiciels",
@@ -179,7 +197,7 @@ export const additional_tools = [
   // Extensions
   // =====================
   {
-    id: 19,
+    id: 1,
     name: "Auto Rename Tag",
     image: "/img/icons/extension/Auto_Rename_Tag.png",
     categorie: "Extensions",
@@ -187,7 +205,7 @@ export const additional_tools = [
     color: "#9EA7B3",
   },
   {
-    id: 20,
+    id: 2,
     name: "Color Highlighter",
     image: "/img/icons/extension/Color_Highlighter.png",
     categorie: "Extensions",
@@ -195,7 +213,7 @@ export const additional_tools = [
     color: "#845259",
   },
   {
-    id: 21,
+    id: 3,
     name: "EditorConfig",
     image: "/img/icons/extension/EditorConfig.png",
     categorie: "Extensions",
@@ -203,7 +221,7 @@ export const additional_tools = [
     color: "#E3F0F0",
   },
   {
-    id: 22,
+    id: 4,
     name: "Error Lens",
     image: "/img/icons/extension/Error_Lens.png",
     categorie: "Extensions",
@@ -211,7 +229,7 @@ export const additional_tools = [
     color: "#F4DE20",
   },
   {
-    id: 23,
+    id: 5,
     name: "ESLint",
     image: "/img/icons/extension/ESLint.png",
     categorie: "Extensions",
@@ -219,7 +237,7 @@ export const additional_tools = [
     color: "#F66526",
   },
   {
-    id: 24,
+    id: 6,
     name: "GitHub Copilot",
     image: "/img/icons/extension/GitHub_Copilot.png",
     categorie: "Extensions",
@@ -227,7 +245,7 @@ export const additional_tools = [
     color: "#FEFEFF",
   },
   {
-    id: 25,
+    id: 7,
     name: "Prettier",
     image: "/img/icons/extension/Prettier_Code_formatter.png",
     categorie: "Extensions",
