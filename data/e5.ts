@@ -14,6 +14,7 @@ export const projects_list = [
     ],
     url: "https://github.com/FlytziTv/sz-slam",
     pdf: "/",
+    image: "/img/projects/mission/sz-folio.png",
     categorie: "Projet personnel",
     status: "Projet personnel",
   },
@@ -24,6 +25,7 @@ export const projects_list = [
     tags: ["Next.js", "Tailwind", "TypeScript", "Lucide", "Vercel"],
     url: "https://github.com/FlytziTv/sz-fivem",
     pdf: "/",
+    image: "/img/projects/mission/fivem-garage.png",
     categorie: "Projet personnel",
     status: "Projet personnel",
   },
@@ -35,8 +37,9 @@ export const projects_list = [
     tags: ["Apache", "Ubuntu", "Linux"],
     pdf: "/files/projets/mission/apache.pdf",
     url: "/",
+    image: "/img/projects/mission/apache.jpg",
     categorie: "Projet en formation Ynov",
-    status: "Projet en formation Ynov",
+    status: "Projet en formation",
   },
 
   {
@@ -46,8 +49,9 @@ export const projects_list = [
     tags: ["Ubuntu", "Linux", "VirtualBox"],
     pdf: "/files/projets/mission/ubuntu-vbox.pdf",
     url: "/",
+    image: "/img/projects/mission/ubuntu-vbox.jpg",
     categorie: "Projet en formation Ynov",
-    status: "Projet en formation Ynov",
+    status: "Projet en formation",
   },
 
   {
@@ -57,8 +61,9 @@ export const projects_list = [
     tags: ["Réseau", "Ubuntu", "Linux", "VMware"],
     pdf: "/files/projets/mission/ubuntu-vmware.pdf",
     url: "/",
+    image: "/img/projects/mission/ubuntu-vmware.jpg",
     categorie: "Projet en formation Ynov",
-    status: "Projet en formation Ynov",
+    status: "Projet en formation",
   },
 
   {
@@ -68,8 +73,9 @@ export const projects_list = [
     tags: ["Réseau", "Windows Server", "VMware"],
     pdf: "/files/projets/mission/windows-server-2025.pdf",
     url: "/",
+    image: "/img/projects/mission/windows-server-2025.png",
     categorie: "Projet en formation Ynov",
-    status: "Projet en formation Ynov",
+    status: "Projet en formation",
   },
 
   {
@@ -77,11 +83,10 @@ export const projects_list = [
     title: "Installation et configuration de Symfony",
     desc: "Installation et configuration du framework Symfony.",
     tags: ["Symfony", "PHP", "Composer"],
-
     pdf: "/files/projets/mission/symfony.pdf",
     url: "/",
-
+    image: "/img/projects/mission/symfony.png",
     categorie: "Projet en formation Ynov",
-    status: "Projet en formation Ynov",
+    status: "Projet en formation",
   },
 ];

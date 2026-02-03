@@ -37,7 +37,7 @@ export default function BtsCard({
         <SZInfosMore title="Description" value={description} />
 
         <div>
-          <h4 className="text-sm text-muted-foreground">Débouchés</h4>
+          <h4 className="text-sm text-muted-foreground">Options</h4>
           {option.map((form, index) => (
             <p key={index} className="text-sm text-foreground font-medium">
               - {form}

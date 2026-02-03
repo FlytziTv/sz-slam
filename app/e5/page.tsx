@@ -28,7 +28,7 @@ export default function E5() {
               <span>{projects.length}</span> {category}
             </h2>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
               {projects.map((project) => (
                 <ProjectCard
                   key={project.id}
@@ -37,6 +37,7 @@ export default function E5() {
                   url={project.url}
                   pdf={project.pdf}
                   description={project.desc}
+                  image={project.image}
                 />
               ))}
             </div>

@@ -132,12 +132,29 @@ export const tools_data = [
     color: "#000000",
     status: "Formation [BTS SIO SLAM]",
   },
-
+  {
+    id: 15,
+    name: "Apache",
+    image: "/img/icons/skills/apache.svg",
+    categorie: "Frameworks & Tech",
+    link: "https://www.apache.org",
+    color: "#C92037",
+    status: "Formation [BTS SIO SLAM]",
+  },
+  {
+    id: 16,
+    name: "Débian",
+    image: "/img/icons/skills/debian.svg",
+    categorie: "Frameworks & Tech",
+    link: "https://www.debian.org",
+    color: "#A80030",
+    status: "Formation [BTS SIO SLAM]",
+  },
   // =====================
   // Outils & Logiciels
   // =====================
   {
-    id: 15,
+    id: 17,
     name: "Visual Studio Code",
     image: "/img/icons/logiciel/vscode.svg",
     categorie: "Outils & Logiciels",
@@ -146,7 +163,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 16,
+    id: 18,
     name: "Figma",
     image: "/img/icons/logiciel/figma.svg",
     categorie: "Outils & Logiciels",
@@ -155,7 +172,7 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 17,
+    id: 19,
     name: "SolidWorks",
     image: "/img/icons/logiciel/solidworks.svg",
     categorie: "Outils & Logiciels",
@@ -164,7 +181,7 @@ export const tools_data = [
     status: "Formation [Bac Pro]",
   },
   {
-    id: 18,
+    id: 20,
     name: "AutoCAD",
     image: "/img/icons/logiciel/autocad.svg",
     categorie: "Outils & Logiciels",
@@ -173,7 +190,7 @@ export const tools_data = [
     status: "Formation [Bac Pro]",
   },
   {
-    id: 19,
+    id: 21,
     name: "Fusion 360",
     image: "/img/icons/logiciel/fusion360.svg",
     categorie: "Outils & Logiciels",
@@ -182,13 +199,31 @@ export const tools_data = [
     status: "Autodidacte",
   },
   {
-    id: 20,
+    id: 22,
     name: "Blender",
     image: "/img/icons/logiciel/blender.svg",
     categorie: "Outils & Logiciels",
     link: "https://www.studio.blender.org/welcome",
     color: "#FF7021",
     status: "Autodidacte",
+  },
+  {
+    id: 23,
+    name: "Virtualbox",
+    image: "/img/icons/logiciel/virtualbox.svg",
+    categorie: "Outils & Logiciels",
+    link: "https://www.virtualbox.org",
+    color: "#FDFBFC",
+    status: "Formation [BTS SIO SLAM]",
+  },
+  {
+    id: 24,
+    name: "VMware",
+    image: "/img/icons/logiciel/vmware.svg",
+    categorie: "Outils & Logiciels",
+    link: "https://www.vmware.com",
+    color: "#0097D3",
+    status: "Formation [BTS SIO SLAM]",
   },
 ];
 
