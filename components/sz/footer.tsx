@@ -29,10 +29,13 @@ export default function Footer() {
             })}
           </div>
         </div>
-        <div className="flex items-center gap-2 text-sztatus rounded-sm px-4 py-2 hover:bg-accent">
+        <Link
+          href="/contact"
+          className="flex items-center gap-2 text-sztatus rounded-sm px-4 py-2 hover:bg-accent"
+        >
           <div className="h-2 w-2 rounded-full bg-sztatus"></div>
           <span className="text-sm">Disponnible.</span>
-        </div>
+        </Link>
       </div>
     </footer>
   );

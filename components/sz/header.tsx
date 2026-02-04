@@ -22,7 +22,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-border flex flex-row items-center justify-start gap-2 px-2 fixed top-0 left-0 right-0 bg-background z-10">
+    <header className="border-b border-border flex flex-row items-center justify-start gap-2 px-2 fixed top-0 left-0 right-0 bg-background z-50">
       <Link href="/" className="shrink-0 z-10">
         <SZLogo size={30} />
       </Link>
