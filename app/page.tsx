@@ -1,6 +1,6 @@
-import Footer from "@/components/sz/footer";
+"use client";
+
 import Header from "@/components/sz/header";
-import { SZMessage } from "@/components/sz/SZMessage";
 import Link from "next/link";
 
 const page = [
@@ -18,82 +18,54 @@ const page = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans">
+    <div className="flex flex-col min-h-screen bg-[url('/img/background/logo.svg')] bg-cover bg-center font-sans">
       <Header />
 
-      <main className="flex-1 flex flex-col gap-8 w-full max-w-340 mx-auto items-center justify-center my-6 px-6">
-        <div className="w-full bg-card border border-border rounded-md flex flex-col shadow-sm">
-          {/* Header de la carte */}
-          <div className="w-full flex flex-col p-6 border-b border-border bg-muted/20">
-            <h2 className="text-3xl font-semibold tracking-tight">Bienvenue</h2>
-            <p className="text-muted-foreground mt-1">
-              Explorez mon univers à travers ce terminal interactif.
+      <main className="flex-1 flex flex-col gap-8 w-full items-center justify-center my-6 px-6">
+        <div className="absolute bottom-6 right-0 left-0 px-6 w-full flex flex-col items-start gap-2 lg:gap-0 lg:flex-row lg:justify-between lg:items-end">
+          <div className="flex flex-col w-150 gap-4">
+            <p className="text-muted-foreground text-[17px] font-light">
+              Paris, France
             </p>
+            <div className="flex flex-col items-start gap-2">
+              <h1 className="uppercase font-bold text-4xl italic text-foreground/70">
+                Developpeur Full Stack
+              </h1>
+              <h1 className="uppercase font-bold text-4xl italic text-foreground/70">
+                Étudiant en BTS SIO SLAM
+              </h1>
+            </div>
           </div>
-
-          {/* Corps de la discussion */}
-          <div className="flex flex-col p-6 gap-8 w-full">
-            <SZMessage message="Salut, je suis Alexis. Développeur de 19 ans passionné par l'architecture logicielle & le développement web. Je cherche toujours à être meilleur qu'hier.">
-              <SZHomeButton link={page[1].url} text="À Propos de moi" />
-            </SZMessage>
-
-            <SZMessage message="Je suis actuellement en BTS SIO SLAM à Ynov Campus de Paris, en recherche de stage ou d'une alternance pour m'apporter des compétences.">
-              <div className="flex flex-wrap gap-2">
-                <SZHomeButton link={page[2].url} text="Mon BTS" />
-                <SZHomeButton
-                  link={page[3].url}
-                  text="Mon École & Alternance"
-                />
-              </div>
-            </SZMessage>
-
-            <SZMessage message="Comme dit auparavant, je cherche toujours à être meilleur qu'hier et pour cela j'ai passé plusieurs certifications et j'apprends beaucoup de choses en autodidacte.">
-              <div className="flex flex-wrap gap-2">
-                <SZHomeButton link={page[4].url} text="Mes Certifications" />
-                <SZHomeButton link={page[5].url} text="Mon Écosystème" />
-              </div>
-            </SZMessage>
-
-            <SZMessage message="Dans le cadre de mon BTS, j'ai réalisé plusieurs projets pour les différentes missions E5 et E6, ainsi que des veilles sur des sujets liés à l'informatique.">
-              <div className="flex flex-wrap gap-2">
-                <SZHomeButton link={page[6].url} text="Projets E5" />
-                <SZHomeButton link={page[7].url} text="Projets E6" />
-                <SZHomeButton link={page[8].url} text="Mes Veilles" />
-              </div>
-            </SZMessage>
-
-            <SZMessage message="N'hésitez pas à me contacter pour discuter de votre projet ou simplement pour échanger sur l'informatique et le développement web.">
-              <SZHomeButton link={page[9].url} text="Me Contacter" />
-            </SZMessage>
-          </div>
-
-          {/* Footer de la carte */}
-          <div className="w-full flex flex-col p-6 border-t border-border">
-            <p className="text-sm text-muted-foreground">
-              Directement disponible sur{" "}
-              <a
-                className="font-semibold hover:underline"
-                href="https://www.linkedin.com/in/alexis-dejesus/"
+          <div className="flex flex-col gap-4 w-150">
+            {/* modifie lespace entre les ligne */}
+            <p className="font-light text-[17px] text-foreground/70 leading-relaxed">
+              Développeur Full Stack et étudiant en BTS SIO (SLAM) à Paris, je
+              conçois avec rigueur des solutions web performantes et intuitives,
+              alliant code robuste et expérience utilisateur fluide.
+            </p>
+            <div className="flex flex-row gap-2">
+              <Link
+                href={page[1].url}
+                className="flex items-center justify-center py-1.5 px-5 border border-border bg-card hover:bg-border/60 rounded-[20px]"
               >
-                LinkedIn
-              </a>
-            </p>
+                À propos
+              </Link>
+              <Link
+                href={page[6].url}
+                className="flex items-center justify-center py-1.5 px-5 border border-border bg-card hover:bg-border/60 rounded-[20px]"
+              >
+                Projets
+              </Link>
+              <Link
+                href={page[9].url}
+                className="flex items-center justify-center py-1.5 px-5 border border-border bg-card hover:bg-border/60 rounded-[20px]"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
-  );
-}
-
-export function SZHomeButton({ text, link }: { text: string; link: string }) {
-  return (
-    <Link
-      href={link}
-      className="px-4 py-2 bg-primary text-primary-foreground font-medium rounded-md text-[13px] hover:bg-primary/20 hover:text-primary border border-primary transition-all w-fit "
-    >
-      {text}
-    </Link>
   );
 }
