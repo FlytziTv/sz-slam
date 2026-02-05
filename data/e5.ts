@@ -13,7 +13,7 @@ export const projects_list = [
       "Vercel",
     ],
     url: "https://github.com/FlytziTv/sz-slam",
-    pdf: "/",
+    pdf: "/files/projets/mission/portfolio.pdf",
     image: "/img/projects/mission/sz-folio.png",
     categorie: "Projet personnel",
     status: "Projet personnel",

@@ -22,14 +22,14 @@ export default function Ecosysteme() {
       <Header />
       <TitleHeader title="Mon Écosystème" />
 
-      <main className="flex-1 w-full flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6 px-6">
+      <main className="flex-1 w-full flex flex-col gap-8 mx-auto items-center justify-center my-6 px-6">
         {Object.entries(groupedByCategory).map(([category, tools]) => (
           <div key={category} className="flex flex-col w-full gap-4">
             <h2 className="text-xl font-semibold">
               <span>{tools.length}</span> {category}
             </h2>
 
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {tools.map((tool) => (
                 <SkillsCard
                   key={tool.id}
@@ -48,7 +48,7 @@ export default function Ecosysteme() {
             <span>{additional_tools.length}</span> Extensions
           </h2>
 
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {additional_tools.map((tools) => (
               <ExCard
                 key={tools.id}

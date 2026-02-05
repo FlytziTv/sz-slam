@@ -12,24 +12,26 @@ export default function About() {
       <Header />
       <TitleHeader title="À propos" />
 
-      <main className="flex flex-col gap-4 max-w-340 mx-auto justify-center my-6 px-6">
-        <AboutMe />
-        <AboutMore />
-
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 ">
-          {/* Commence par l'id le plus récent */}
-          {[...about_study].reverse().map((study) => (
-            <AboutStud
-              key={study.id}
-              color={study.color}
-              url={study.link}
-              image={study.image}
-              titre={study.title}
-              entreprise={study.entreprise}
-              type={study.type}
-              date={study.date}
-            />
-          ))}
+      <main className="flex flex-col lg:flex-row gap-4 mx-auto justify-center my-6 px-6 ">
+        <AboutMe className="" />
+        <div className="flex flex-col gap-4">
+          <AboutMore className="col-span-2" />
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            {/* Commence par l'id le plus récent */}
+            {[...about_study].reverse().map((study) => (
+              <AboutStud
+                className="col-span-1"
+                key={study.id}
+                color={study.color}
+                url={study.link}
+                image={study.image}
+                titre={study.title}
+                entreprise={study.entreprise}
+                type={study.type}
+                date={study.date}
+              />
+            ))}
+          </div>
         </div>
       </main>
       <Footer />

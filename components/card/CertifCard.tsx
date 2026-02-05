@@ -22,9 +22,17 @@ export default function CertifCard({
 }) {
   return (
     <div className="group relative bg-card w-full border border-border rounded-md p-4 gap-4 flex flex-col xl:flex-row">
-      <div className="h-71 relative aspect-9/16 bg-white rounded-sm shrink-0 flex items-center justify-center ">
+      {/* <div className="h-71 relative aspect-9/16 bg-white rounded-sm shrink-0 flex items-center justify-center ">
         <Image src={image} alt={name} width={150} height={150} />
-      </div>
+      </div> */}
+
+      <Image
+        src={image}
+        alt={name}
+        width={80}
+        height={80}
+        className="absolute shrink-0 right-4 top-4"
+      />
       <div className="flex flex-col gap-4 items-start ">
         <SZInfos title="Nom" value={name} />
         <SZInfos title="Categorie" value={categorie} />

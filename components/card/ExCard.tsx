@@ -51,6 +51,7 @@ export default function ExCard({
         <div className="flex flex-col gap-4 items-start w-full">
           <SZInfos title="Nom" value={titre} />
 
+          <SZInfos title="Extention" value="VSCode" />
           <MinInfosLinkExtension title="En savoir plus" value={url} />
         </div>
       </div>

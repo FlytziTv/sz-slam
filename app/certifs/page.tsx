@@ -21,14 +21,14 @@ export default function Certifs() {
       <Header />
       <TitleHeader title="Mes Certifications" />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6 px-6">
+      <main className="flex flex-col gap-8 mx-auto items-center justify-center my-6 px-6">
         {Object.entries(groupedByCategory).map(([category, certifs]) => (
           <div key={category} className="flex flex-col w-full gap-4">
             <h2 className="text-xl font-semibold">
               <span>{certifs.length}</span> {category}
             </h2>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
               {certifs.map((certif) => (
                 <CertifCard
                   key={certif.id}

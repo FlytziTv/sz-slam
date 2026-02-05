@@ -43,7 +43,7 @@ export default function SkillsCard({
           background: `radial-gradient(circle 160px at ${pos.x}px ${pos.y}px, ${color}25, transparent 80%)`,
         }}
       />
-      <div className="relative z-10 flex flex-row gap-4 w-full">
+      <div className="z-10 flex flex-row gap-4 w-full">
         <Image
           src={image}
           alt={titre}

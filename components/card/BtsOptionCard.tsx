@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { SZInfos, SZInfosLink } from "../sz/SZInfos";
 
 export default function BtsOptionCard({
@@ -7,15 +8,22 @@ export default function BtsOptionCard({
   description,
   debouche,
   url,
+  className,
 }: {
   name: string;
   designation: string;
   description: string;
   debouche: string[];
   url: string;
+  className?: string;
 }) {
   return (
-    <div className="group relative bg-card w-full border border-border rounded-md p-4 gap-4 flex flex-col">
+    <div
+      className={cn(
+        "group relative bg-card w-full border border-border rounded-md p-4 gap-4 flex flex-col",
+        className,
+      )}
+    >
       {/* <div className="h-71 relative aspect-9/16 bg-white rounded-sm shrink-0 flex items-center justify-center ">
         <Image src={image} alt={name} width={250} height={250} />
       </div> */}

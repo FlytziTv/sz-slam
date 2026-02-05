@@ -21,14 +21,14 @@ export default function E5() {
       <Header />
       <TitleHeader title="Mes projets E5" />
 
-      <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6 px-6">
+      <main className="flex flex-col gap-8 mx-auto items-center justify-center my-6 px-6">
         {Object.entries(groupedByCategory).map(([category, projects]) => (
           <div key={category} className="flex flex-col w-full gap-4">
             <h2 className="text-xl font-semibold">
               <span>{projects.length}</span> {category}
             </h2>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
               {projects.map((project) => (
                 <ProjectCard
                   key={project.id}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SZInfos, SZInfosLink } from "../sz/SZInfos";
+import { cn } from "@/lib/utils";
 
 export default function AboutStud({
   url,
@@ -9,6 +10,7 @@ export default function AboutStud({
   type,
   date,
   color,
+  className,
 }: {
   url: string;
   image: string;
@@ -17,10 +19,14 @@ export default function AboutStud({
   type: string;
   date: string;
   color: string;
+  className?: string;
 }) {
   return (
     <div
-      className="group relative bg-card w-full border border-border rounded-md p-4 gap-4 flex flex-row transition-colors duration-150 hover:border-(--certif-color)"
+      className={cn(
+        "group relative bg-card w-full border border-border rounded-md p-4 gap-4 flex flex-row transition-colors duration-150 hover:border-(--certif-color)",
+        className,
+      )}
       style={{ "--certif-color": color } as React.CSSProperties}
     >
       <div className="flex p-4 rounded-md items-center justify-center bg-(--certif-color)/20">

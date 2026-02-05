@@ -32,10 +32,8 @@ export default function ProjectCard({
           <SZInfos title="Categorie" value={categorie} />
         </div>
         <SZInfosMore title="Description" value={description} />
-        <div className="w-full flex flex-row gap-6">
-          {url !== "/" && <SZInfosLink title="Site Web" value={url} />}
-          {pdf !== "/" && <SZInfosLink title="Documentation" value={pdf} />}
-        </div>
+        {url !== "/" && <SZInfosLink title="Site Web" value={url} />}
+        {pdf !== "/" && <SZInfosLink title="Documentation" value={pdf} />}
       </div>
     </div>
   );
