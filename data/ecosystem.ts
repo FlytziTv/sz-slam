@@ -225,6 +225,16 @@ export const tools_data = [
     color: "#0097D3",
     status: "Formation [BTS SIO SLAM]",
   },
+
+  {
+    id: 25,
+    name: "Mobaxterm",
+    image: "/img/icons/logiciel/mobaxterm.svg",
+    categorie: "Outils & Logiciels",
+    link: "https://mobaxterm.mobatek.net",
+    color: "#C0FF01",
+    status: "Formation [BTS SIO SLAM]",
+  },
 ];
 
 export const additional_tools = [
