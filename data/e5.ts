@@ -1,6 +1,18 @@
 export const projects_list = [
   {
     id: 1,
+    title: "Interface garage FiveM",
+    desc: "Inferface utilisateur pour la gestion des garages dans les serveurs FiveM (GTA V). Permet aux joueurs de stocker, récupérer et gérer leurs véhicules en jeu.",
+    tags: ["Next.js", "Tailwind", "TypeScript", "Lucide", "Vercel"],
+    url: "https://github.com/FlytziTv/sz-fivem",
+    pdf: "/",
+    image: "/img/projects/mission/fivem-garage.png",
+    categorie: "Projet personnel",
+    status: "Projet personnel",
+  },
+
+  {
+    id: 2,
     title: "Portfolio Alexis De Jesus",
     desc: "Hub digital full-stack conçu comme un dashboard de monitoring. Ce projet centralise mes expériences via une architecture modulaire en TypeScript, intégrant des API routes pour le contact et une interface Bento-Grid optimisée sous la DA SZ Teams.",
     tags: [
@@ -15,17 +27,6 @@ export const projects_list = [
     url: "https://github.com/FlytziTv/sz-slam",
     pdf: "/files/projets/mission/portfolio.pdf",
     image: "/img/projects/mission/sz-folio.png",
-    categorie: "Projet personnel",
-    status: "Projet personnel",
-  },
-  {
-    id: 2,
-    title: "Interface garage FiveM",
-    desc: "Inferface utilisateur pour la gestion des garages dans les serveurs FiveM (GTA V). Permet aux joueurs de stocker, récupérer et gérer leurs véhicules en jeu.",
-    tags: ["Next.js", "Tailwind", "TypeScript", "Lucide", "Vercel"],
-    url: "https://github.com/FlytziTv/sz-fivem",
-    pdf: "/",
-    image: "/img/projects/mission/fivem-garage.png",
     categorie: "Projet personnel",
     status: "Projet personnel",
   },
@@ -44,7 +45,7 @@ export const projects_list = [
 
   {
     id: 4,
-    title: "Installation Ubuntu VirtualBox",
+    title: "Ubuntu VirtualBox",
     desc: "Installation de Ubuntu sur une machine virtuelle via VirtualBox.",
     tags: ["Ubuntu", "Linux", "VirtualBox"],
     pdf: "/files/projets/mission/ubuntu-vbox.pdf",
@@ -56,7 +57,7 @@ export const projects_list = [
 
   {
     id: 5,
-    title: "Installation Ubuntu VMware",
+    title: "Ubuntu VMware",
     desc: "Installation de Ubuntu sur une machine virtuelle via VMware.",
     tags: ["Réseau", "Ubuntu", "Linux", "VMware"],
     pdf: "/files/projets/mission/ubuntu-vmware.pdf",
@@ -68,10 +69,10 @@ export const projects_list = [
 
   {
     id: 6,
-    title: "Installation et configuration Windows Server 2025",
+    title: "Windows Server 2025",
     desc: "Installation et configuration de Windows Server 2025 sur une machine virtuelle.",
     tags: ["Réseau", "Windows Server", "VMware"],
-    pdf: "/files/projets/mission/windows-server-2025.pdf",
+    pdf: "/files/projets/mission/windows-server.pdf",
     url: "/",
     image: "/img/projects/mission/windows-server-2025.png",
     categorie: "Projet en formation Ynov",
@@ -80,12 +81,36 @@ export const projects_list = [
 
   {
     id: 7,
-    title: "Installation et configuration de Symfony",
+    title: "Symfony",
     desc: "Installation et configuration du framework Symfony.",
     tags: ["Symfony", "PHP", "Composer"],
     pdf: "/files/projets/mission/symfony.pdf",
     url: "/",
     image: "/img/projects/mission/symfony.png",
+    categorie: "Projet en formation Ynov",
+    status: "Projet en formation",
+  },
+
+  {
+    id: 8,
+    title: "Mobaxterm ssh",
+    desc: "Installation et configuration de Mobaxterm pour se connecter à une machine virtuelle via SSH.",
+    tags: ["Mobaxterm", "SSH", "Réseau", "Linux"],
+    pdf: "/files/projets/mission/mobaxterm.pdf",
+    url: "/",
+    image: "/img/projects/mission/mobaxterm.png",
+    categorie: "Projet en formation Ynov",
+    status: "Projet en formation",
+  },
+
+  {
+    id: 9,
+    title: "OCS Inventory",
+    desc: "Installation et configuration de OCS Inventory pour l'inventaire des machines d'un réseau.",
+    tags: ["OCS Inventory", "Réseau", "Linux", "ssh", "Mobaxterm"],
+    pdf: "/files/projets/mission/ocs.pdf",
+    url: "/",
+    image: "/img/projects/mission/ocs-inv.png",
     categorie: "Projet en formation Ynov",
     status: "Projet en formation",
   },
