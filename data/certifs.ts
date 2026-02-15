@@ -35,4 +35,16 @@ export const certif_data = [
     link: "https://www.pix.fr",
     date: 2024,
   },
+  {
+    id: 4,
+    status: "Autodidacte",
+    categorie: "Numérique",
+    name: "SecNum Academie",
+    image: "/img/certif/secnum.png",
+    pdf: "/files/certif/secnum.pdf",
+    description:
+      "Connaissances en sécurité informatique, gestion des risques, protection des données et bonnes pratiques pour sécuriser les systèmes d'information.",
+    link: "https://secnumacademie.gouv.fr",
+    date: 2026,
+  },
 ];
