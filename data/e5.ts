@@ -114,4 +114,15 @@ export const projects_list = [
     categorie: "Projet en formation Ynov",
     status: "Projet en formation",
   },
+  {
+    id: 10,
+    title: "Absolute Stream",
+    desc: "Création d'une application web pour faire des rewiews de films, séries et saga. L'application permet aux utilisateurs de créer un compte, de noter et de commenter les œuvres, ainsi que de consulter les critiques d'autres utilisateurs.",
+    tags: ["Next.js", "Tailwind", "TypeScript", "TMDB API"],
+    pdf: "/",
+    url: "https://github.com/FlytziTv/Absolute_Stream",
+    image: "/img/projects/mission/absolute-stream.png",
+    categorie: "Projet personnel",
+    status: "Projet personnel en groupe",
+  },
 ];
