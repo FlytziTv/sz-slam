@@ -1,14 +1,9 @@
 import Footer from "@/components/sz/footer";
-import Header from "@/components/sz/header";
-import TitleHeader from "@/components/sz/TitleHeader";
 import { SZInfos, SZInfosLink } from "@/components/sz/SZInfos";
 
 export default function MentionsLegales() {
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans">
-      <Header />
-      <TitleHeader title="Mentions Légales" />
-
+    <>
       <main className="flex flex-col gap-8 max-w-340 mx-auto w-full my-6 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Section Éditeur */}
@@ -76,6 +71,6 @@ export default function MentionsLegales() {
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 }

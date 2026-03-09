@@ -1,7 +1,5 @@
-import ProjectCard from "@/components/card/ProjectCard";
 import Footer from "@/components/sz/footer";
-import Header from "@/components/sz/header";
-import TitleHeader from "@/components/sz/TitleHeader";
+import { SZProjectCard } from "@/components/SZ2026/SZProjectCard";
 import { projects_list } from "@/data/e5";
 
 export default function E5() {
@@ -17,10 +15,7 @@ export default function E5() {
   );
 
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans">
-      <Header />
-      <TitleHeader title="Mes projets E5" />
-
+    <>
       <main className="flex flex-col gap-8 mx-auto items-center justify-center my-6 px-6">
         {Object.entries(groupedByCategory).map(([category, projects]) => (
           <div key={category} className="flex flex-col w-full gap-4">
@@ -30,7 +25,7 @@ export default function E5() {
 
             <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
               {[...projects].reverse().map((project) => (
-                <ProjectCard
+                <SZProjectCard
                   key={project.id}
                   name={project.title}
                   categorie={project.status}
@@ -45,6 +40,6 @@ export default function E5() {
         ))}
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

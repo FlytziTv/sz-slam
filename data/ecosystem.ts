@@ -235,14 +235,9 @@ export const tools_data = [
     color: "#C0FF01",
     status: "Formation [BTS SIO SLAM]",
   },
-];
 
-export const additional_tools = [
-  // =====================
-  // Extensions
-  // =====================
   {
-    id: 1,
+    id: 26,
     name: "Auto Rename Tag",
     image: "/img/icons/extension/Auto_Rename_Tag.png",
     categorie: "Extensions",
@@ -250,7 +245,7 @@ export const additional_tools = [
     color: "#9EA7B3",
   },
   {
-    id: 2,
+    id: 27,
     name: "Color Highlighter",
     image: "/img/icons/extension/Color_Highlighter.png",
     categorie: "Extensions",
@@ -258,7 +253,7 @@ export const additional_tools = [
     color: "#845259",
   },
   {
-    id: 3,
+    id: 28,
     name: "EditorConfig",
     image: "/img/icons/extension/EditorConfig.png",
     categorie: "Extensions",
@@ -266,7 +261,7 @@ export const additional_tools = [
     color: "#E3F0F0",
   },
   {
-    id: 4,
+    id: 29,
     name: "Error Lens",
     image: "/img/icons/extension/Error_Lens.png",
     categorie: "Extensions",
@@ -274,7 +269,7 @@ export const additional_tools = [
     color: "#F4DE20",
   },
   {
-    id: 5,
+    id: 30,
     name: "ESLint",
     image: "/img/icons/extension/ESLint.png",
     categorie: "Extensions",
@@ -282,7 +277,7 @@ export const additional_tools = [
     color: "#F66526",
   },
   {
-    id: 6,
+    id: 31,
     name: "GitHub Copilot",
     image: "/img/icons/extension/GitHub_Copilot.png",
     categorie: "Extensions",
@@ -290,7 +285,7 @@ export const additional_tools = [
     color: "#FEFEFF",
   },
   {
-    id: 7,
+    id: 32,
     name: "Prettier",
     image: "/img/icons/extension/Prettier_Code_formatter.png",
     categorie: "Extensions",

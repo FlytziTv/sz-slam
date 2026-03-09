@@ -1,16 +1,11 @@
 import StudCard from "@/components/card/StudCard";
 import WorkCard from "@/components/card/WorkCard";
 import Footer from "@/components/sz/footer";
-import Header from "@/components/sz/header";
-import TitleHeader from "@/components/sz/TitleHeader";
 import { formation_data, search_data } from "@/data/works";
 
 export default function Works() {
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans">
-      <Header />
-      <TitleHeader title="Mon école et mon alternance / stage" />
-
+    <>
       <main className="flex flex-col gap-8 max-w-340 mx-auto items-center justify-center my-6 px-6">
         <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-4">
           <StudCard
@@ -40,6 +35,6 @@ export default function Works() {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

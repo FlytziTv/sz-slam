@@ -1,9 +1,6 @@
-import ExCard from "@/components/card/ExCard";
-import SkillsCard from "@/components/card/SkillsCard";
 import Footer from "@/components/sz/footer";
-import Header from "@/components/sz/header";
-import TitleHeader from "@/components/sz/TitleHeader";
-import { tools_data, additional_tools } from "@/data/ecosystem";
+import SZSkillsCard from "@/components/SZ2026/SZSkillsCard";
+import { tools_data } from "@/data/ecosystem";
 
 export default function Ecosysteme() {
   const groupedByCategory = tools_data.reduce(
@@ -18,10 +15,7 @@ export default function Ecosysteme() {
   );
 
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans">
-      <Header />
-      <TitleHeader title="Mon Écosystème" />
-
+    <>
       <main className="flex-1 w-full flex flex-col gap-8 mx-auto items-center justify-center my-6 px-6">
         {Object.entries(groupedByCategory).map(([category, tools]) => (
           <div key={category} className="flex flex-col w-full gap-4">
@@ -29,39 +23,21 @@ export default function Ecosysteme() {
               <span>{tools.length}</span> {category}
             </h2>
 
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
               {tools.map((tool) => (
-                <SkillsCard
+                <SZSkillsCard
                   key={tool.id}
                   url={tool.link}
                   image={tool.image}
                   titre={tool.name}
-                  status={tool.status}
                   color={tool.color}
                 />
               ))}
             </div>
           </div>
         ))}
-        <div className="flex flex-col w-full gap-4">
-          <h2 className="text-xl font-semibold">
-            <span>{additional_tools.length}</span> Extensions
-          </h2>
-
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {additional_tools.map((tools) => (
-              <ExCard
-                key={tools.id}
-                url={tools.link}
-                image={tools.image}
-                titre={tools.name}
-                color={tools.color}
-              />
-            ))}
-          </div>
-        </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

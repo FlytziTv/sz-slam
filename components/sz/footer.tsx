@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SZLogo } from "../icons/logo";
+import { Logo } from "../icons/logo";
 
 const footerlink = [
   { id: 1, title: "Accueil", url: "/" },
@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
           <Link href="/" className="p-2">
-            <SZLogo size={30} />
+            <Logo size={30} />
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {footerlink.map((item) => {
