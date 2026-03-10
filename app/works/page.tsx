@@ -208,7 +208,7 @@ export default function Works() {
                       item.objectif
                     ) : (
                       <ul className="flex flex-col gap-2">
-                        {item.mission.map((m, idx) => (
+                        {item.mission?.map((m, idx) => (
                           <li
                             key={idx}
                             className="text-xs text-zinc-400 flex items-start gap-2"
