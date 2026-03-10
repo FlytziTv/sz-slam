@@ -12,8 +12,8 @@ const data_stud = {
       value: "Sept 2025",
       color: "border-green-500 bg-green-500/10",
     },
-    { name: "Fin", value: "Juin 2027", color: "border-red-500 bg-red-500/10" },
-    { name: "Durée", value: "2 ans", color: "border-sztatus bg-sztatus/10" },
+    { name: "Fin", value: "Juin 2027" },
+    { name: "Durée", value: "2 ans" },
   ],
   slogan: "Le digital s'apprend par la pratique.",
   desc: "Paris Ynov Campus est une institution dédiée à la formation aux métiers de demain. L'école se distingue par une pédagogie active centrée sur la réalisation de projets réels, favorisant l'interdisciplinarité (YDAYS) et l'insertion professionnelle immédiate grâce à l'alternance.",
@@ -39,12 +39,10 @@ export const search_data = [
       {
         name: "Début",
         value: "Sept 2026",
-        color: "border-green-500 bg-green-500/10",
       },
       {
         name: "Fin",
         value: "Juin 2027",
-        color: "border-red-500 bg-red-500/10",
       },
       { name: "Durée", value: "1 ans", color: "border-sztatus bg-sztatus/10" },
     ],
@@ -60,17 +58,14 @@ export const search_data = [
       {
         name: "Début",
         value: "6 Juillet 2026",
-        color: "border-green-500 bg-green-500/10",
       },
       {
         name: "Fin",
         value: "7 Août 2026",
-        color: "border-red-500 bg-red-500/10",
       },
       {
         name: "Durée",
         value: "5 semaines",
-        color: "border-sztatus bg-sztatus/10",
       },
     ],
     mission: [
@@ -85,7 +80,7 @@ export const search_data = [
 export default function Works() {
   return (
     <>
-      <main className="flex-1w-full max-w-340 mx-auto items-start justify-center my-6 px-6">
+      <main className="flex-1 w-full max-w-340 mx-auto items-start justify-center my-6 px-6">
         <div className=" grid grid-cols-1 xl:grid-cols-2 gap-6 w-full">
           <div className="flex-1 flex flex-col gap-6 bg-[#0A0A0A] border border-[#252525] rounded-xl p-4">
             <div className="flex flex-row gap-4 items-center justify-start">
@@ -108,7 +103,7 @@ export default function Works() {
               {data_stud.dates.map((date, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col gap-1 border ${date.color} rounded-lg p-3 items-center justify-center w-full`}
+                  className={`flex flex-col gap-1 border border-sztatus/50 bg-sztatus/5 rounded-lg p-3 items-center justify-center w-full`}
                 >
                   <p className="text-sm text-white/70">{date.name}</p>
                   <p className="font-bold">{date.value}</p>
@@ -170,7 +165,7 @@ export default function Works() {
                 {search_data[0].dates.map((date, index) => (
                   <div
                     key={index}
-                    className={`flex flex-col gap-1 border ${date.color} rounded-lg p-3 items-center justify-center w-full`}
+                    className={`flex flex-col gap-1 border border-sztatus/50 bg-sztatus/5 rounded-lg p-3 items-center justify-center w-full`}
                   >
                     <p className="text-sm text-white/70">{date.name}</p>
                     <p className="font-bold">{date.value}</p>
@@ -212,7 +207,7 @@ export default function Works() {
                 {search_data[1].dates.map((date, index) => (
                   <div
                     key={index}
-                    className={`flex flex-col gap-1 border ${date.color} rounded-lg p-3 items-center justify-center w-full`}
+                    className={`flex flex-col gap-1 border border-sztatus/50 bg-sztatus/5 rounded-lg p-3 items-center justify-center w-full`}
                   >
                     <p className="text-sm text-white/70">{date.name}</p>
                     <p className="font-bold">{date.value}</p>
@@ -222,7 +217,7 @@ export default function Works() {
 
               <div className="bg-[#1a1a1a] rounded-lg p-4 flex flex-col gap-2">
                 <h5 className="text-base font-medium text-[#ffff]">
-                  Formations proposées
+                  Missions proposées
                 </h5>
 
                 <ul className="grid grid-cols-1 gap-2">
