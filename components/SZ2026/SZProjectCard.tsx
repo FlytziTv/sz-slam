@@ -18,7 +18,7 @@ function SZProjectCard({
   image: string;
 }) {
   return (
-    <div className="group bg-[#0A0A0A] border border-[#252525] transition-all duration-300 rounded-lg p-3 gap-3 flex flex-col min-w-100 cursor-pointer">
+    <div className="group bg-[#0A0A0A] border border-[#252525] transition-all duration-300 rounded-lg p-3 gap-3 flex flex-col cursor-pointer">
       <div className="aspect-video w-full relative overflow-hidden rounded-sm sticky-0">
         <Image
           src={image}
