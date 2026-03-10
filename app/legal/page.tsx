@@ -4,7 +4,7 @@ import { SZSection } from "@/components/SZ2026/SZSection";
 export default function MentionsLegales() {
   return (
     <div className="min-h-screen text-[#888] font-sans ">
-      <main className="max-w-6xl mx-auto px-6 py-24 flex flex-col gap-14">
+      <main className="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-14">
         <section className="space-y-1">
           <h1 className="text-white text-3xl tracking-tight uppercase italic font-bold">
             Mentions Légales
