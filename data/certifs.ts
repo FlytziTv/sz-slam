@@ -47,4 +47,16 @@ export const certif_data = [
     link: "https://secnumacademie.gouv.fr",
     date: 2026,
   },
+  {
+    id: 5,
+    status: "Autodidacte",
+    categorie: "Web Development",
+    name: "Responsive Web Design",
+    image: "/img/certif/freecodecamp.png",
+    pdf: "https://www.freecodecamp.org/certification/flytzi/responsive-web-design-v9",
+    description:
+      "Compétences en design adaptatif, utilisation de media queries, flexbox et grid pour créer des interfaces web optimisées pour tous les appareils.",
+    link: "https://www.freecodecamp.org/learn/responsive-web-design-v9/",
+    date: 2025,
+  },
 ];
