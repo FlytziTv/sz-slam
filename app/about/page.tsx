@@ -58,7 +58,7 @@ const AboutPage = () => {
         <div className="space-y-16">
           <SZSection title="Expériences">
             <div className="space-y-8">
-              {about_xp.works.map((work) => (
+              {about_xp.works.reverse().map((work) => (
                 <div key={work.id} className="relative group">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0">
                     <h3 className="text-white text-sm font-medium">
@@ -85,7 +85,7 @@ const AboutPage = () => {
 
           <SZSection title="Études">
             <div className="space-y-8">
-              {about_xp.studs.map((stud) => (
+              {about_xp.studs.reverse().map((stud) => (
                 <div key={stud.id} className="relative group">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0">
                     <h3 className="text-white text-sm font-medium">
